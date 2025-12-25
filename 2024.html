@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>EDSA - 2024</title>
+       
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Sono:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+                        
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="css/bootstrap-icons.css">
+
+        <link rel="icon" href="images/favicon.ico" rel="icon" type="image/x-icon">
+
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+        <link href="css/templatemo-pod-talk.css" rel="stylesheet">
+
+        <style>
+            .animate-on-scroll {
+                opacity: 0;
+                transform: translateY(50px);
+                transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+                will-change: opacity, transform;
+            }
+
+            .animate-on-scroll.is-visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        </style>
+
+    </head>
+
+    <div id="preloader">
+        <div class="spinner-border text-danger" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="bi-arrow-up"></i></button>
+    
+    <body>
+
+        <main>
+
+            <nav class="navbar navbar-expand-lg sticky-top">
+                <div class="container align-items-left">
+                    
+                    <div class="navbar-brand-group d-flex align-items-center">
+                        <a class="brand-item" href="https://www.instagram.com/pbiarraniry">
+                            <img src="images/UIN Ar-Raniry.png" class="brand-logo img-fluid" alt="Logo UIN">
+                            <div class="brand-text">
+                                <span class="brand-title">Pendidikan</span>
+                                <span class="brand-title">Bahasa Inggris</span>
+                                <span class="brand-subtitle">UIN Ar-Raniry</span>
+                            </div>
+                        </a>
+                        <div class="brand-divider"></div>
+                        <a class="brand-item" href="index.html">
+                            <img src="images/EDSA.png" class="brand-logo img-fluid" alt="Logo EDSA">
+                            <div class="brand-text">
+                                <span class="brand-title">EDSA</span>
+                                <span class="brand-subtitle description">English Department Student<br>Association UIN Ar-Raniry</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <button class="navbar-toggler custom-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto align-items-center">
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about us.html">ABOUT US</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle d-flex justify-content-between align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    OUR DIVISIONS
+                                    <span class="arrow-icon"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="ECO.html">ECO</a></li>
+                                    <li><a class="dropdown-item" href="HRD.html">HRD</a></li>
+                                    <li><a class="dropdown-item" href="IT.html">IT</a></li>
+                                    <li><a class="dropdown-item" href="SC.html">SC</a></li>
+                                    <li><a class="dropdown-item" href="Presidential.html">Presidential</a></li>
+                                    <li><a class="dropdown-item" href="PRC.html">PRC</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle d-flex justify-content-between align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    OUR PAST EVENTS
+                                    <span class="arrow-icon"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="2025.html">2025</a></li>
+                                    <li><a class="dropdown-item active" href="2024.html">2024</a></li>
+                                    <li><a class="dropdown-item" href="2023.html">2023</a></li>
+                                    <li><a class="dropdown-item" href="2022.html">2022</a></li>
+                                    <li><a class="dropdown-item" href="2021.html">2021</a></li>
+                                    <li><a class="dropdown-item" href="2020.html">2020</a></li>
+                                    <li><a class="dropdown-item" href="2019.html">2019</a></li>
+                                    <li><a class="dropdown-item" href="2018 below.html">2018 below</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle d-flex justify-content-between align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    MORE
+                                    <span class="arrow-icon"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="Former President.html">Former President</a></li>
+                                    <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+             <header class="site-header d-flex flex-column justify-content-center align-items-center">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12 text-center">
+
+                            <h1 class="mb-0" style="color: white;"><strong>2024</strong></h1>
+                            <h6 class="mb-0" style="color: white;">Below are the memorable past events of EDSA that reflect our journey</h6>
+                            <p class="mb-0" style="color: white;">Celebrating the moments that have shaped our community, inspired creativity, and strenghthened our unity</p>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+
+            <section class="latest-podcast-section section-padding pt-0" id="section_2" style="padding-bottom: 200px;">
+                <div class="container">
+                    <div class="row justify-content-center">
+
+                        <div class="col-lg-12 col-12 animate-on-scroll">
+                            <div class="section-title-wrap mb-4">
+                                <h4 class="section-title">2024 Activity Links</h4>
+                            </div>
+                        </div>
+
+                        <div class="profile-block profile-detail-block d-flex flex-wrap align-items-center mb-4 animate-on-scroll" style="border-radius: 30px; padding: 15px;">
+                            <div class="d-flex align-items-center"> 
+                                <img src="https://lh3.googleusercontent.com/sitesv/AAzXCkfT6mYjmCsvA8ZEXe8xBwQhapaNv5QbM82ivv_8tQYj6-zQsve7KRbfOJNfkiq7V9oUqidRaf63yRA84stZ4m9hPLCirhtSqe6q_IWLrCAEIO5VntX2v2U6PPyEAMF_gzULWVwwvV6qX5cnGxNruMA1SDJChC_GjjhWGK3_Oz39yDNvet6J7Vtfdf4=w16383" class="profile-block-image img-fluid" alt="">
+                                    <p style="color: red; margin-bottom: 0;">
+                                        <strong>EDSA FAIR : EDSA Back to 90's 2024</strong>
+                                        Official Website
+                                    </p>
+                            </div>
+                            <ul class="social-icon ms-auto mb-0">
+                                <li class="social-icon-item">
+                                    <a href="https://sites.google.com/ar-raniry.ac.id/edsafair2024/home" class="social-icon-link bi-globe"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="col-lg-6 col-12 mb-4 animate-on-scroll">
+                            <div class="custom-block d-flex shadow-lg" style="padding: 15px; border-radius: 15px; align-items: center;">
+                                <div class="">
+                                    <div class="custom-block-icon-wrap" style="width: 120px; height: 120px; flex-shrink: 0;">
+                                        <a href="https://sumberpost.com/2024/11/11/penutupan-gemilang-edsa-fair-2024-merayakan-keberhasilan-dan-kecemerlangan/" class="custom-block-image-wrap">
+                                            <img src="https://sumberpost.com/wp-content/uploads/2024/11/WhatsApp-Image-2024-11-11-at-07.17.18.jpeg" class="custom-block-image img-fluid" alt="" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="custom-block-info ms-3">
+                                    <h5 class="mb-2">
+                                        <a href="https://sumberpost.com/2024/11/11/penutupan-gemilang-edsa-fair-2024-merayakan-keberhasilan-dan-kecemerlangan/" style="font-size: 18px; line-height: 1.4;">
+                                            Penutupan Gemilang EDSA Fair 2024: Merayakan Keberhasilan dan Kecemerlangan
+                                        </a>
+                                    </h5>
+                                    <div class="d-flex align-items-center">
+                                        <small class="me-4">
+                                            <i class="bi-calendar-event-fill custom-icon me-1"></i>
+                                                June 1, 2024
+                                        </small>
+                                        <small class="me-4">
+                                            <i class="bi-person-fill custom-icon me-1"></i>
+                                                Sumber Post
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mb-4 animate-on-scroll">
+                            <div class="custom-block d-flex shadow-lg" style="padding: 15px; border-radius: 15px; align-items: center;">
+                                <div class="">
+                                    <div class="custom-block-icon-wrap" style="width: 120px; height: 120px; flex-shrink: 0;">
+                                        <a href="https://www.sman-modalbangsa.sch.id/mosa-menyala-di-edsa-fair-competition-uin-ar-raniry/" class="custom-block-image-wrap">
+                                            <img src="https://www.sman-modalbangsa.sch.id/wp-content/uploads/2024/11/IMG_20241111_182124.jpg" class="custom-block-image img-fluid" alt="" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="custom-block-info ms-3">
+                                    <h5 class="mb-2">
+                                        <a href="https://www.sman-modalbangsa.sch.id/mosa-menyala-di-edsa-fair-competition-uin-ar-raniry/" style="font-size: 18px; line-height: 1.4;">
+                                            Mosa Menyala di EDSA FAIR Competition UIN Ar- Raniry
+                                        </a>
+                                    </h5>
+                                    <div class="d-flex align-items-center">
+                                        <small class="me-4">
+                                            <i class="bi-calendar-event-fill custom-icon me-1"></i>
+                                            November 11, 2024
+                                        </small>
+                                        <small class="me-4">
+                                            <i class="bi-person-fill custom-icon me-1"></i>
+                                            SMAN Modal Bangsa
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mb-4 animate-on-scroll">
+                            <div class="custom-block d-flex shadow-lg" style="padding: 15px; border-radius: 15px; align-items: center;">
+                                <div class="">
+                                    <div class="custom-block-icon-wrap" style="width: 120px; height: 120px; flex-shrink: 0;">
+                                        <a href="https://aceh.tribunnews.com/2024/03/29/mega-iftar-prodi-pendidikan-bahasa-inggris-uin-ar-raniry-2024-berlangsung-meriah" class="custom-block-image-wrap">
+                                            <img src="https://asset.tribunnews.com/BRwlewyJKVlSka5FTkyPs4ius9o=/1200x675/filters:upscale():quality(30):format(webp):focal(0.5x0.5:0.5x0.5)/aceh/foto/bank/originals/Mega-Iftar.jpg" class="custom-block-image img-fluid" alt="" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="custom-block-info ms-3">
+                                    <h5 class="mb-2">
+                                        <a href="https://aceh.tribunnews.com/2024/03/29/mega-iftar-prodi-pendidikan-bahasa-inggris-uin-ar-raniry-2024-berlangsung-meriah" style="font-size: 18px; line-height: 1.4;">
+                                            Mega Iftar Prodi Pendidikan Bahasa Inggris UIN Ar-Raniry 2024 Berlangsung Meriah
+                                        </a>
+                                    </h5>
+                                    <div class="d-flex align-items-center">
+                                        <small class="me-4">
+                                            <i class="bi-calendar-event-fill custom-icon me-1"></i>
+                                                March 29, 2024
+                                        </small>
+                                        <small class="me-4">
+                                            <i class="bi-person-fill custom-icon me-1"></i>
+                                                Amirullah
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mb-4 animate-on-scroll">
+                            <div class="custom-block d-flex shadow-lg" style="padding: 15px; border-radius: 15px; align-items: center;">
+                                <div class="">
+                                    <div class="custom-block-icon-wrap" style="width: 120px; height: 120px; flex-shrink: 0;">
+                                        <a href="https://sumberpost.com/2024/06/01/peringati-hari-lahir-pancasila-edsa-adakan-humanity-action/" class="custom-block-image-wrap">
+                                            <img src="https://sumberpost.com/wp-content/uploads/2024/06/WhatsApp-Image-2024-06-01-at-20.58.34-1405x1536.jpeg" class="custom-block-image img-fluid" alt="" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="custom-block-info ms-3">
+                                    <h5 class="mb-2">
+                                        <a href="https://sumberpost.com/2024/06/01/peringati-hari-lahir-pancasila-edsa-adakan-humanity-action/" style="font-size: 18px; line-height: 1.4;">
+                                            Peringati Hari Lahir Pancasila, EDSA Adakan Humanity Action
+                                        </a>
+                                    </h5>
+                                    <div class="d-flex align-items-center">
+                                        <small class="me-4">
+                                            <i class="bi-calendar-event-fill custom-icon me-1"></i>
+                                                June 1, 2024
+                                        </small>
+                                        <small class="me-4">
+                                            <i class="bi-person-fill custom-icon me-1"></i>
+                                                Sumber Post
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mb-4 animate-on-scroll">
+                            <div class="custom-block d-flex shadow-lg" style="padding: 15px; border-radius: 15px; align-items: center;">
+                                <div class="">
+                                    <div class="custom-block-icon-wrap" style="width: 120px; height: 120px; flex-shrink: 0;">
+                                        <a href="https://sumberpost.com/2024/10/17/pre-event-meriah-seminar-internasional-warnai-persiapan-edsa-fair-ke-5/" class="custom-block-image-wrap">
+                                            <img src="https://sumberpost.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-17-at-20.13.52-1536x1152.jpeg" class="custom-block-image img-fluid" alt="" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="custom-block-info ms-3">
+                                    <h5 class="mb-2">
+                                        <a href="https://sumberpost.com/2024/10/17/pre-event-meriah-seminar-internasional-warnai-persiapan-edsa-fair-ke-5/" style="font-size: 18px; line-height: 1.4;">
+                                            Pre-Event Meriah, Seminar Internasional Warnai Persiapan EDSA Fair ke-5
+                                        </a>
+                                    </h5>
+                                    <div class="d-flex align-items-center">
+                                        <small class="me-4">
+                                            <i class="bi-calendar-event-fill custom-icon me-1"></i>
+                                                October 17, 2024
+                                        </small>
+                                        <small class="me-4">
+                                            <i class="bi-person-fill custom-icon me-1"></i>
+                                                Sumber Post
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mb-4 animate-on-scroll">
+                            <div class="custom-block d-flex shadow-lg" style="padding: 15px; border-radius: 15px; align-items: center;">
+                                <div class="">
+                                    <div class="custom-block-icon-wrap" style="width: 120px; height: 120px; flex-shrink: 0;">
+                                        <a href="https://sumberpost.com/2024/02/27/edsa-sukses-gelar-pelantikan/" class="custom-block-image-wrap">
+                                            <img src="https://sumberpost.com/wp-content/uploads/2024/02/IMG-20240227-WA0011.jpg" class="custom-block-image img-fluid" alt="" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="custom-block-info ms-3">
+                                    <h5 class="mb-2">
+                                        <a href="https://sumberpost.com/2024/02/27/edsa-sukses-gelar-pelantikan/" style="font-size: 18px; line-height: 1.4;">
+                                            EDSA Sukses Gelar Pelantikan
+                                        </a>
+                                    </h5>
+                                    <div class="d-flex align-items-center">
+                                        <small class="me-4">
+                                            <i class="bi-calendar-event-fill custom-icon me-1"></i>
+                                                February 27, 2024
+                                        </small>
+                                        <small class="me-4">
+                                            <i class="bi-person-fill custom-icon me-1"></i>
+                                                Sumber Post
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mb-4 animate-on-scroll">
+                            <div class="custom-block d-flex shadow-lg" style="padding: 15px; border-radius: 15px; align-items: center;">
+                                <div class="">
+                                    <div class="custom-block-icon-wrap" style="width: 120px; height: 120px; flex-shrink: 0;">
+                                        <a href="https://ftk.ar-raniry.ac.id/2024/10/edsa-gelar-seminar-internasional-dalam-rangka-edsa-fair-ke-5/" class="custom-block-image-wrap">
+                                            <img src="https://sumberpost.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-17-at-20.13.52-1536x1152.jpeg" class="custom-block-image img-fluid" alt="" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="custom-block-info ms-3">
+                                    <h5 class="mb-2">
+                                        <a href="https://ftk.ar-raniry.ac.id/2024/10/edsa-gelar-seminar-internasional-dalam-rangka-edsa-fair-ke-5/" style="font-size: 18px; line-height: 1.4;">
+                                            EDSA Gelar Seminar Internasional dalam Rangka EDSA Fair ke-5
+                                        </a>
+                                    </h5>
+                                    <div class="d-flex align-items-center">
+                                        <small class="me-4">
+                                            <i class="bi-calendar-event-fill custom-icon me-1"></i>
+                                                October 18, 2024
+                                        </small>
+                                        <small class="me-4">
+                                            <i class="bi-person-fill custom-icon me-1"></i>
+                                                Admin PBI
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mb-4 animate-on-scroll">
+                            <div class="custom-block d-flex shadow-lg" style="padding: 15px; border-radius: 15px; align-items: center;">
+                                <div class="">
+                                    <div class="custom-block-icon-wrap" style="width: 120px; height: 120px; flex-shrink: 0;">
+                                        <a href="https://sumberpost.com/2024/03/27/adakan-mega-iftar-edsa-berikan-santunan-anak-yatim-dan-fakir-miskin/" class="custom-block-image-wrap">
+                                            <img src="https://sumberpost.com/wp-content/uploads/2024/03/WhatsApp-Image-2024-03-28-at-09.50.50-1536x1152.jpeg" class="custom-block-image img-fluid" alt="" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="custom-block-info ms-3">
+                                    <h5 class="mb-2">
+                                        <a href="https://sumberpost.com/2024/03/27/adakan-mega-iftar-edsa-berikan-santunan-anak-yatim-dan-fakir-miskin/" style="font-size: 18px; line-height: 1.4;">
+                                            Adakan Mega Iftar, EDSA Berikan Santunan Anak Yatim dan Fakir Miskin
+                                        </a>
+                                    </h5>
+                                    <div class="d-flex align-items-center">
+                                        <small class="me-4">
+                                            <i class="bi-calendar-event-fill custom-icon me-1"></i>
+                                                March 27, 2024
+                                        </small>
+                                        <small class="me-4">
+                                            <i class="bi-person-fill custom-icon me-1"></i>
+                                                Sumber Post
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mb-4 animate-on-scroll">
+                            <div class="custom-block d-flex shadow-lg" style="padding: 15px; border-radius: 15px; align-items: center;">
+                                <div class="">
+                                    <div class="custom-block-icon-wrap" style="width: 120px; height: 120px; flex-shrink: 0;">
+                                        <a href="https://ftk.ar-raniry.ac.id/2024/11/upaya-menjaga-silaturrahmi-edsa-menggelar-ragam-kegiatan-olah-raga/" class="custom-block-image-wrap">
+                                            <img src="https://ftk.ar-raniry.ac.id/wp-content/uploads/2024/11/FB_IMG_1730123860835-1024x683-1-scaled-1.jpg" class="custom-block-image img-fluid" alt="" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="custom-block-info ms-3">
+                                    <h5 class="mb-2">
+                                        <a href="https://ftk.ar-raniry.ac.id/2024/11/upaya-menjaga-silaturrahmi-edsa-menggelar-ragam-kegiatan-olah-raga/" style="font-size: 18px; line-height: 1.4;">
+                                            Upaya Menjaga Silaturrahmi EDSA Menggelar Ragam Kegiatan Olah Raga
+                                        </a>
+                                    </h5>
+                                    <div class="d-flex align-items-center">
+                                        <small class="me-4">
+                                            <i class="bi-calendar-event-fill custom-icon me-1"></i>
+                                                November 06, 2024
+                                        </small>
+                                        <small class="me-4">
+                                            <i class="bi-person-fill custom-icon me-1"></i>
+                                                Admin PBI
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mb-4 animate-on-scroll">
+                            <div class="custom-block d-flex shadow-lg" style="padding: 15px; border-radius: 15px; align-items: center;">
+                                <div class="">
+                                    <div class="custom-block-icon-wrap" style="width: 120px; height: 120px; flex-shrink: 0;">
+                                        <a href="https://sumberpost.com/2024/10/13/prodi-pendidikan-bahasa-inggris-kembali-menggelar-bsc-tahun-2024/" class="custom-block-image-wrap">
+                                            <img src="https://sumberpost.com/wp-content/uploads/2024/10/IMG-20241013-WA0067-1536x1033.jpg" class="custom-block-image img-fluid" alt="" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="custom-block-info ms-3">
+                                    <h5 class="mb-2">
+                                        <a href="https://sumberpost.com/2024/10/13/prodi-pendidikan-bahasa-inggris-kembali-menggelar-bsc-tahun-2024/" style="font-size: 18px; line-height: 1.4;">
+                                            Prodi Pendidikan Bahasa Inggris Kembali Menggelar BSC Tahun 2024
+                                        </a>
+                                    </h5>
+                                    <div class="d-flex align-items-center">
+                                        <small class="me-4">
+                                            <i class="bi-calendar-event-fill custom-icon me-1"></i>
+                                                October 13, 2024
+                                        </small>
+                                        <small class="me-4">
+                                            <i class="bi-person-fill custom-icon me-1"></i>
+                                                SMAN Modal Bangsa
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row align-items-start">
+
+            <div class="col-lg-3 col-12 mb-4 mb-lg-0">
+                <div class="d-flex align-items-center">
+                    
+                    <div class="d-flex me-2">
+                        <a class="navbar-brand me-0" href="index.html">
+                            <img src="images/UIN Ar-Raniry.png" class="logo-image img-fluid" alt="logo" 
+                                 style="width: 50px; height: auto; max-width: none;">
+                        </a>
+                        <a class="navbar-brand" href="index.html" style="margin-left: 5px;">
+                            <img src="images/EDSA.png" class="logo-image img-fluid" alt="logo" 
+                                 style="width: 53px; height: auto; max-width: none;">
+                        </a>
+                    </div>
+
+                    <div class="text-white">
+                        <h3 class="mb-0 text-white" style="font-weight: 800; line-height: 1; font-size: 26px;">EDSA</h3>
+                        <p class="mb-0 text-white" style="font-weight: 600; letter-spacing: 1px; font-size: 11px;">UIN AR-RANIRY</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                <h6 class="site-footer-title mb-3">Contact</h6>
+                <p>
+                    <strong class="d-inline me-2">Phone:</strong>
+                    <a href="http://wa.me/6283825450534" target="_blank">+62838 - 2545 - 0543</a> 
+                </p>
+                <p>
+                    <strong class="d-inline me-2">Email:</strong>
+                    <a href="mailto:edsa@ar-raniry.ac.id" target="_blank">edsa@ar-raniry.ac.id</a> 
+                </p>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                <h6 class="site-footer-title mb-3">Social</h6>
+                
+                <ul class="social-icon d-flex flex-wrap"> 
+                    <li class="social-icon-item">
+                        <a href="https://www.instagram.com/edsa_arraniry/" target="_blank" class="social-icon-link bi-instagram"></a>
+                    </li>
+                    <li class="social-icon-item">
+                        <a href="https://x.com/edsauinar" target="_blank" class="social-icon-link bi-twitter"></a>
+                    </li>
+                    <li class="social-icon-item">
+                        <a href="http://wa.me/6283825450534" target="_blank" class="social-icon-link bi-whatsapp"></a>
+                    </li>
+                    <li class="social-icon-item">
+                        <a href="https://www.tiktok.com/@edsa_arraniry" target="_blank" class="social-icon-link bi-tiktok"></a>
+                    </li>
+                    <li class="social-icon-item">
+                        <a href="https://www.youtube.com/@edsa_arraniry" target="_blank" class="social-icon-link bi-youtube"></a>
+                    </li>
+                    <li class="social-icon-item">
+                        <a href="https://www.facebook.com/edsa.arraniry?locale=id_ID" target="_blank" class="social-icon-link bi-facebook"></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-12 text-center text-lg-end">
+                <p class="copyright-text mb-0">Copyright © 2025<br>EDSA Ar-Raniry</p>
+                <p class="copyright-text mb-0" style="font-size: 12px;">Designed by: <a href="https://teer.id/ahcoenk" target="_blank">Ahcoenk</a></p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/custom.js"></script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry, index) => {
+                        if (entry.isIntersecting) {
+                            setTimeout(() => {
+                                entry.target.classList.add('is-visible');
+                            }, index * 100);
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.1
+                });
+
+                animatedElements.forEach(el => {
+                    observer.observe(el);
+                });
+            });
+        </script>
+
+    </body>
+</html>
