@@ -159,6 +159,46 @@
                 <div class="container">
                     <div class="row justify-content-center">
 
+                        <div class="col-lg-12 col-12 mb-5 animate-on-scroll">
+                            <div class="custom-block py-4 px-3 px-md-5">
+                                <div class="row align-items-center text-center">
+                                    
+                                    <div class="col-6 col-md-3 mb-3 mb-md-0">
+                                        <div class="counter-item">
+                                            <i class="bi bi-person-check-fill display-5 mb-2" style="color: #ff0000;"></i>
+                                            <h2 class="counter-number fw-bold mb-0 fs-2" data-target="75">0</h2>
+                                            <span class="small text-caputilize" style="color: #ff0000;">Active Members</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6 col-md-3 mb-3 mb-md-0">
+                                        <div class="counter-item">
+                                            <i class="bi bi-envelope-fill display-5 mb-2" style="color: #ff0000;"></i>
+                                            <h2 class="counter-number fw-bold mb-0 fs-2" data-target="1500">0</h2>
+                                            <span class="small text-caputilize" style="color: #ff0000;">Total Members</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6 col-md-3 mt-2 mt-md-0">
+                                        <div class="counter-item">
+                                            <i class="bi bi-calendar-check-fill display-5 mb-2" style="color: #ff0000;"></i>
+                                            <h2 class="counter-number fw-bold mb-0 fs-2" data-target="120">0</h2>
+                                            <span class="small text-caputilize" style="color: #ff0000;">Events Held</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6 col-md-3 mt-2 mt-md-0">
+                                        <div class="counter-item">
+                                            <i class="bi bi-person-lines-fill display-5 mb-2" style="color: #ff0000;"></i>
+                                            <h2 class="counter-number fw-bold mb-0 fs-2" data-target="6">0</h2>
+                                            <span class="small text-caputilize" style="color: #ff0000;">Total Divisions</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="col-lg-12 col-12 animate-on-scroll">
                             <div class="section-title-wrap mb-4">
                                 <h4 class="section-title">Latest Events</h4>
@@ -648,6 +688,42 @@
                     observer.observe(el);
                 });
             });
+
+            document.addEventListener("DOMContentLoaded", () => {
+        const counters = document.querySelectorAll('.counter-number');
+        const speed = 200; // Kecepatan animasi
+
+        const animateCounters = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = +counter.getAttribute('data-target');
+                    
+                    const updateCount = () => {
+                        const count = +counter.innerText;
+                        const inc = target / speed;
+
+                        if (count < target) {
+                            counter.innerText = Math.ceil(count + inc);
+                            setTimeout(updateCount, 20);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+                    updateCount();
+                    observer.unobserve(counter);
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(animateCounters, {
+            threshold: 0.5
+        });
+
+        counters.forEach(counter => {
+            observer.observe(counter);
+        });
+    });
         </script>
 
     </body>
