@@ -4,29 +4,56 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <meta name="description" content="">
-        <meta name="author" content="">
+        <meta name="description" content="International Seminar EDSA UIN Ar-Raniry 2025">
+        <meta name="author" content="EDSA Team">
 
         <meta name="google-adsense-account" content="ca-pub-5288845452888745">
 
-        <title>EDSA - International Seminar</title>
+        <title>EDSA - International Seminar 2025</title>
 
-        <!-- CSS FILES -->        
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Sono:wght@200;300;400;500;700&display=swap" rel="stylesheet">
                         
         <link rel="stylesheet" href="css/bootstrap.min.css">
-
         <link rel="stylesheet" href="css/bootstrap-icons.css">
-
         <link rel="stylesheet" href="css/owl.carousel.min.css">
-        
         <link rel="stylesheet" href="css/owl.theme.default.min.css">
-
         <link href="css/templatemo-pod-talk.css" rel="stylesheet">
+        
+        <link rel="icon" href="images/favicon-96.png" type="image/png" sizes="96x96">
+
+        <style>
+            .custom-block-icon-wrap {
+                width: 120px;
+                height: 120px;
+                flex-shrink: 0;
+            }
+            .custom-block-image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+            @media (max-width: 768px) {
+                .custom-block-icon-wrap {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+            
+            /* Style khusus untuk animasi scroll (jika diperlukan) */
+            .animate-on-scroll {
+                opacity: 0;
+                transform: translateY(50px);
+                transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+                will-change: opacity, transform;
+            }
+            .animate-on-scroll.is-visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        </style>
 
     </head>
     
@@ -34,40 +61,48 @@
 
         <main>
 
-            <nav class="navbar navbar-expand-lg">
-                <div class="container">
-                    <a class="navbar-brand me-lg-5 me-0" href="index.html">
-                        <img src="images/EDSA.png" class="logo-image img-fluid" style="width: 53px; height: auto; max-width: none;" alt="templatemo pod talk">
-                    </a>
+            <nav class="navbar navbar-expand-lg sticky-top">
+                <div class="container align-items-left">
+                    
+                    <div class="navbar-brand-group d-flex align-items-center">
+                        <a class="brand-item" href="https://www.instagram.com/pbiarraniry">
+                            <img src="images/UIN Ar-Raniry.png" class="brand-logo img-fluid" alt="Logo UIN">
+                            <div class="brand-text">
+                                <span class="brand-title">Pendidikan</span>
+                                <span class="brand-title">Bahasa Inggris</span>
+                                <span class="brand-subtitle">UIN Ar-Raniry</span>
+                            </div>
+                        </a>
+                        <div class="brand-divider"></div>
+                        <a class="brand-item" href="index.html">
+                            <img src="images/EDSA.png" class="brand-logo img-fluid" alt="Logo EDSA">
+                            <div class="brand-text">
+                                <span class="brand-title">EDSA</span>
+                                <span class="brand-subtitle description">English Department Student<br>Association UIN Ar-Raniry</span>
+                            </div>
+                        </a>
+                    </div>
 
-                    <form action="Intrnational Seminar.html" method="get" class="custom-form search-form flex-fill me-3" role="search">
-                        <div class="input-group input-group-lg">    
-                            <input name="search" type="search" class="form-control" id="search" placeholder="Search" aria-label="Search">
-
-                            <button type="submit" class="form-control" id="submit">
-                                <i class="bi-search"></i>
-                            </button>
-                        </div>
-                    </form>
-    
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler custom-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
-                </button>
-    
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-lg-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html">Home</a>
-                            </li>
+                    </button>
 
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto align-items-center">
+                            
                             <li class="nav-item">
-                                <a class="nav-link" href="about us.html">About us</a>
+                                <a class="nav-link" href="index.html">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about us.html">ABOUT US</a>
                             </li>
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Our Divisions</a>
-
-                                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                <a class="nav-link dropdown-toggle d-flex justify-content-between align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    OUR DIVISIONS
+                                    <span class="arrow-icon"></span>
+                                </a>
+                                <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="ECO.html">ECO</a></li>
                                     <li><a class="dropdown-item" href="HRD.html">HRD</a></li>
                                     <li><a class="dropdown-item" href="IT.html">IT</a></li>
@@ -76,10 +111,13 @@
                                     <li><a class="dropdown-item" href="PRC.html">PRC</a></li>
                                 </ul>
                             </li>
+                            
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Our Past Events</a>
-
-                                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                <a class="nav-link dropdown-toggle d-flex justify-content-between align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    OUR PAST EVENTS
+                                    <span class="arrow-icon"></span>
+                                </a>
+                                <ul class="dropdown-menu">
                                     <li><a class="dropdown-item active" href="2025.html">2025</a></li>
                                     <li><a class="dropdown-item" href="2024.html">2024</a></li>
                                     <li><a class="dropdown-item" href="2023.html">2023</a></li>
@@ -90,23 +128,31 @@
                                     <li><a class="dropdown-item" href="2018 below.html">2018 below</a></li>
                                 </ul>
                             </li>
+                            
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">More</a>
-
-                                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                <a class="nav-link dropdown-toggle d-flex justify-content-between align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    MORE
+                                    <span class="arrow-icon"></span>
+                                </a>
+                                <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="Former President.html">Former President</a></li>
                                     <li><a class="dropdown-item" href="contact.html">Contact</a></li>
-                                     
                                 </ul>
                             </li>
+
                         </ul>
+                    </div>
                 </div>
             </nav>
             
 
-             <header class="site-header d-flex flex-column justify-content-center align-items-center">
+            <header class="site-header d-flex flex-column justify-content-center align-items-center">
                 <div class="container">
                     <div class="row justify-content-center">
+                        <div class="col-lg-12 col-12 text-center animate-on-scroll">
+                            <h2 class="mb-0 animate-on-scroll" style="color: white; font-weight: 800;">International Seminar 2025</h2>
+                            <p class="mb-0 animate-on-scroll" style="color: white;">Building Public Speaking Skills with Confidence</p>
+                        </div>
                     </div>
                 </div>
             </header>
@@ -116,229 +162,288 @@
                     <div class="row justify-content-center">
 
                         <div class="col-lg-12 col-12">
-                            <div class="section-title-wrap mb-5">
-                                <h4 class="section-title">International Seminar</h4>
+                            <div class="section-title-wrap mb-5 animate-on-scroll">
+                                <h4 class="section-title">Event Overview</h4>
                             </div>
                         </div>
 
                         <div class="col-lg-12 col-12 mb-5">
                             <div class="row">
-                                <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+                                <div class="col-lg-4 col-12 mb-4 mb-lg-0 animate-on-scroll">
                                     <div class="custom-block-image-wrap">
-                                        <img src="images/2025/WhatsApp Image 2025-12-03 at 6.30.36 AM.jpeg" 
+                                        <img src="images/2025/internationalsemina 1.JPG" 
                                              class="about-image img-fluid" 
-                                             alt="Seminar Image"
+                                             alt="International Seminar EDSA"
                                              style="width: 100%; object-fit: cover; border-radius: 20px;">
+                                        
+                                        <a href="https://drive.google.com/drive/folders/19gpgToo6S_GVEM93oKahQ_kAFAYTR7Ir?usp=drive_link" target="_blank" class="btn custom-btn mt-3 w-100 animate-on-scroll" style="border-radius: 50px;">
+                                            <i class="bi-camera-fill me-2"></i> View Gallery
+                                        </a>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-8 col-12">
                                     <div class="custom-block-info">
-                                        <div class="custom-block-top d-flex mb-1">
+                                        <div class="custom-block-top d-flex mb-1 animate-on-scroll">
                                             <small class="me-4">
-                                                <i class="bi-calendar-event custom-icon"></i>
-                                                50 Minutes
+                                                <i class="bi-geo-alt-fill custom-icon"></i>
+                                                Aula Theater UIN Ar-Raniry
                                             </small>
                                             <small>
-                                                <i class="bi-geo-alt-fill custom-icon"></i>
+                                                <i class="bi-calendar-event-fill custom-icon"></i>
                                                 Nov 13, 2025
                                             </small>
                                         </div>
 
-                                        <h2 class="mb-2">Modern Vintage</h2>
+                                        <h2 class="mb-2 animate-on-scroll">From Classroom to Global Stage</h2>
 
-                                        <p>What is Content Marketing? If you are wondering what content marketing is all about, this is the place to start.</p>
-                                        <p>You are not allowed to redistribute this template ZIP file on any other template collection website. Please contact TemplateMo for more information.</p>
-                                        <p>Pod Talk HTML CSS Template is made by Bootstrap v5.2.2 framework. You are allowed to modify and use this template for your business websites.</p>
-                                        <div class="mt-2">
-                                            <a href="#" class="btn custom-btn">
-                                            Learn More
-                                            </a>
+                                        <p style="text-align: justify;" class="animate-on-scroll">
+                                            Public speaking is more than just talking; it is about connecting, influencing, and inspiring others. On November 13, 2025, EDSA UIN Ar-Raniry successfully held an International Seminar titled <strong>“From Classroom to Global Stage: Building Your Public Speaking with Confidence and Clarity”</strong>.
+                                        </p>
+                                        
+                                        <p style="text-align: justify;" class="animate-on-scroll">
+                                            This seminar was designed to bridge the gap between academic learning and real-world application. Many students struggle with stage fright or anxiety when expressing their ideas in English. Through this event, participants learned practical techniques to overcome nervousness, structure impactful speeches, and deliver their messages with authority.
+                                        </p>
+
+                                        <div class="mt-4">
+                                            <h6 class="mb-3 animate-on-scroll">External Coverage:</h6>
+                                            <div class="custom-block d-flex shadow-lg animate-on-scroll" style="padding: 15px; border-radius: 15px; align-items: center;">
+                                                <div class="">
+                                                    <div class="custom-block-icon-wrap animate-on-scroll">
+                                                        <a href="https://ftk.ar-raniry.ac.id/2025/11/edsa-gelar-seminar-internasional-bahas-cara-atasi-kecemasan-saat-public-speaking/" target="_blank" class="custom-block-image-wrap">
+                                                            <img src="images/2025/international seminar 2.JPG" class="custom-block-image img-fluid" alt="News Thumbnail">
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="custom-block-info ms-3 animate-on-scroll">
+                                                    <h5 class="mb-2">
+                                                        <a href="https://ftk.ar-raniry.ac.id/2025/11/edsa-gelar-seminar-internasional-bahas-cara-atasi-kecemasan-saat-public-speaking/" target="_blank" style="font-size: 18px; line-height: 1.4;">
+                                                            EDSA Gelar Seminar Internasional, Bahas Cara Atasi Kecemasan Saat Public Speaking
+                                                        </a>
+                                                    </h5>
+                                                    <div class="d-flex align-items-center">
+                                                        <small class="me-4">
+                                                            <i class="bi-calendar-event-fill custom-icon me-1"></i>
+                                                                November 13, 2025
+                                                        </small>
+                                                        <small class="me-4">
+                                                            <i class="bi-person-fill custom-icon me-1"></i>
+                                                                Admin PBI
+                                                        </small>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="row mt-4 justify-content-center">
+                        <div class="col-lg-12 col-12 mb-5">
+                            <div class="section-title-wrap mb-4 animate-on-scroll">
+                                <h4 class="section-title">Seminar Highlights</h4>
+                            </div>
                             
-                            <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                                <div class="team-thumb bg-white shadow-lg">
-                                    <img src="images/profile/handsome-asian-man-listening-music-through-headphones.jpg" class="about-image img-fluid" alt="">
-                                    
-                                    <div class="team-info">
-                                        <h4 class="mb-2">
-                                            Elsa
-                                            <img src="images/verified.png" class="verified-image img-fluid" alt="">
-                                        </h4>
-                                        <span class="badge">Influencer</span>
-                                    </div>
-
-                                    <div class="social-share">
-                                        <ul class="social-icon">
-                                            <li class="social-icon-item">
-                                                <a href="#" class="social-icon-link bi-twitter"></a>
-                                            </li>
-                                            <li class="social-icon-item">
-                                                <a href="#" class="social-icon-link bi-envelope-fill"></a>
-                                            </li>
-                                            <li class="social-icon-item">
-                                                <a href="#" class="social-icon-link bi-pinterest"></a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                            <div class="owl-carousel owl-theme animate-on-scroll">
+                                <div class="owl-carousel-info-wrap item mt-0 mb-0 animate-on-scroll" style="width: 100%; margin: 0 auto;">
+                                    <img src="images/2025/International Seminar/IMG_4930.JPG" class="owl-carousel-image img-fluid" style="width: 100%; height: 300px; object-fit: cover;" alt="Highlight 1">
                                 </div>
-                            </div>
 
-                            <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                                <div class="team-thumb bg-white shadow-lg">
-                                    <img src="images/profile/cute-smiling-woman-outdoor-portrait.jpg" class="about-image img-fluid" alt="">
-                                    
-                                    <div class="team-info">
-                                        <h4 class="mb-2">
-                                            Taylor
-                                            <img src="images/verified.png" class="verified-image img-fluid" alt="">
-                                        </h4>
-                                        <span class="badge">Model</span>
-                                    </div>
-
-                                    <div class="social-share">
-                                        <ul class="social-icon">
-                                            <li class="social-icon-item">
-                                                <a href="#" class="social-icon-link bi-twitter"></a>
-                                            </li>
-                                            <li class="social-icon-item">
-                                                <a href="#" class="social-icon-link bi-envelope-fill"></a>
-                                            </li>
-                                            <li class="social-icon-item">
-                                                <a href="#" class="social-icon-link bi-pinterest"></a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                <div class="owl-carousel-info-wrap item mt-0 mb-0 animate-on-scroll" style="width: 100%; margin: 0 auto;">
+                                    <img src="images/2025/International Seminar/IMG_5073.JPG" class="owl-carousel-image img-fluid" style="width: 100%; height: 300px; object-fit: cover;" alt="Highlight 2">
                                 </div>
-                            </div>
 
-                            <div class="col-lg-3 col-md-6 col-12">
-                                <div class="team-thumb bg-white shadow-lg">
-                                    <img src="images/profile/smart-attractive-asian-glasses-male-standing-smile-with-freshness-joyful-casual-blue-shirt-portrait-white-background.jpg" class="about-image img-fluid" alt="">
-                                    
-                                    <div class="team-info">
-                                        <h4 class="mb-2">
-                                            Chan
-                                            <img src="images/verified.png" class="verified-image img-fluid" alt="">
-                                        </h4>
-                                        <span class="badge">Education</span>
-                                    </div>
+                                <div class="owl-carousel-info-wrap item mt-0 mb-0 animate-on-scroll" style="width: 100%; margin: 0 auto;">
+                                    <img src="images/2025/International Seminar/IMG_5499.JPG" class="owl-carousel-image img-fluid" style="width: 100%; height: 300px; object-fit: cover;" alt="Highlight 3">
+                                </div>
 
-                                    <div class="social-share">
-                                        <ul class="social-icon">
-                                            <li class="social-icon-item">
-                                                <a href="#" class="social-icon-link bi-twitter"></a>
-                                            </li>
-                                            <li class="social-icon-item">
-                                                <a href="#" class="social-icon-link bi-envelope-fill"></a>
-                                            </li>
-                                            <li class="social-icon-item">
-                                                <a href="#" class="social-icon-link bi-pinterest"></a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                <div class="owl-carousel-info-wrap item mt-0 mb-0 animate-on-scroll" style="width: 100%; margin: 0 auto;">
+                                    <img src="images/2025/International Seminar/IMG_5547.JPG" class="owl-carousel-image img-fluid" style="width: 100%; height: 300px; object-fit: cover;" alt="Highlight 4">
+                                </div>
+
+                                <div class="owl-carousel-info-wrap item mt-0 mb-0 animate-on-scroll" style="width: 100%; margin: 0 auto;">
+                                    <img src="images/2025/International Seminar/IMG_5661.JPG" class="owl-carousel-image img-fluid" style="width: 100%; height: 300px; object-fit: cover;" alt="Highlight 5">
+                                </div>
+
+                                <div class="owl-carousel-info-wrap item mt-0 mb-0 animate-on-scroll" style="width: 100%; margin: 0 auto;">
+                                    <img src="images/2025/International Seminar/IMG_5672.JPG" class="owl-carousel-image img-fluid" style="width: 100%; height: 300px; object-fit: cover;" alt="Highlight 6">
                                 </div>
                             </div>
                         </div>
+
+                        <div class="col-lg-12 col-12">
+                            <div class="section-title-wrap mb-4">
+                                <h4 class="section-title">Meet Our Speakers</h4>
+                            </div>
                         </div>
+
+                        <div class="row justify-content-center">
+                    
+                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 animate-on-scroll">
+                        <div class="team-thumb bg-white shadow-lg pt-0">
+                            <img src="images/2025/International Seminar/IMG_5547.JPG" class="about-image img-fluid" alt="" style="height: 450px; width: 100%; object-fit: cover;">
+
+                            <div class="team-info">
+                                <h5 class="mb-2">
+                                    Yana Levy
+                                </h5>
+                                <span class="badge bs-red text-white">Speaker</span>
+                            </div>
+                            <div class="social-share">
+                                <ul class="social-icon pb-2">
+                                    <li class="social-icon-item">
+                                        <a href="https://www.linkedin.com/in/yana-levy-254604294" target="_blank" class="social-icon-link bi-linkedin"></a>
+                                    </li>
+
+                                    <li class="social-icon-item">
+                                        <a href="https://www.shansi.org/yana-levy-bio" target="_blank" class="social-icon-link bi-globe"></a>
+                                    </li>
+                                </ul>
+                            </div> 
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 animate-on-scroll">
+                        <div class="team-thumb bg-white shadow-lg">
+                            <img src="images/2025/International Seminar/IMG_5754.JPG" class="about-image img-fluid" alt="" style="height: 450px; width: 100%; object-fit: cover;">
+
+                            <div class="team-info">
+                                <h5 class="mb-2">
+                                    Prof. Dr. T. Zulfikar, Ph.D 
+                                </h5>
+                                <span class="badge">Speaker</span>
+                            </div>
+                            <div class="social-share">
+                                <ul class="social-icon pb-2">
+                                    <li class="social-icon-item">
+                                        <a href="https://id.linkedin.com/in/prof-dr-teuku-zulfikar-371212b2" target="_blank" class="social-icon-link bi-linkedin"></a>
+                                    </li>
+
+                                    <li class="social-icon-item">
+                                        <a href="https://www.researchgate.net/profile/Teuku-Zulfikar" target="_blank" class="social-icon-link bi-book-half"></a>
+                                    </li>
+
+                                    <li class="social-icon-item">
+                                        <a href="https://www.youtube.com/watch?v=2a1mV_kZ_Ek" target="_blank" class="social-icon-link bi-youtube"></a>
+                                    </li>
+                                </ul>
+                            </div> 
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 animate-on-scroll">
+                        <div class="team-thumb bg-white shadow-lg">
+                            <img src="https://media.licdn.com/dms/image/v2/D5603AQGrtB-uO9WH-Q/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1695020290844?e=2147483647&v=beta&t=TNDzWg-eRJrjfa7yoAmkvaZ2XDN8_wPvVpiBcC7sQ14" class="about-image img-fluid" alt="" style="height: 450px; width: 100%; object-fit: cover;">
+
+                            <div class="team-info">
+                                <h5 class="mb-2">
+                                    Fera Busfina Zalha, M.A 
+                                </h5>
+                                <span class="badge bg-warning text-white">Moderator</span>
+                            </div>
+                            <div class="social-share">
+                                <ul class="social-icon pb-4">
+                                    <li class="social-icon-item">
+                                        <a href="https://id.linkedin.com/in/fera-zalha-a7208214b" target="_blank" class="social-icon-link bi-linkedin"></a>
+                                    </li>
+
+                                    <li class="social-icon-item">
+                                        <a href="https://sinta.kemdiktisaintek.go.id/departments/authors/3519/395E7C45-E1CE-488C-A18C-002B72A84071/1228D122-120B-4BC8-963B-EC8907A6689E?page=3" target="_blank" class="social-icon-link bi-book-half"></a>
+                                    </li>
+                                </ul>
+                            </div> 
+                        </div>
+                    </div>
                 </div>
             </section>
             
         </main>
 
-
         <footer class="site-footer">
             <div class="container">
                 <div class="row align-items-start">
 
-            <div class="col-lg-3 col-12 mb-4 mb-lg-0">
-                <div class="d-flex align-items-center">
-                    
-                    <div class="d-flex me-2">
-                        <a class="navbar-brand me-0" href="index.html">
-                            <img src="images/UIN Ar-Raniry.png" class="logo-image img-fluid" alt="logo" 
-                                 style="width: 50px; height: auto; max-width: none;">
-                        </a>
-                        <a class="navbar-brand" href="index.html" style="margin-left: 5px;">
-                            <img src="images/EDSA.png" class="logo-image img-fluid" alt="logo" 
-                                 style="width: 53px; height: auto; max-width: none;">
-                        </a>
+                    <div class="col-lg-3 col-12 mb-4 mb-lg-0">
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex me-2">
+                                <a class="navbar-brand me-0" href="index.html">
+                                    <img src="images/UIN Ar-Raniry.png" class="logo-image img-fluid" alt="logo" style="width: 50px; height: auto; max-width: none;">
+                                </a>
+                                <a class="navbar-brand" href="index.html" style="margin-left: 5px;">
+                                    <img src="images/EDSA.png" class="logo-image img-fluid" alt="logo" style="width: 53px; height: auto; max-width: none;">
+                                </a>
+                            </div>
+                            <div class="text-white">
+                                <h3 class="mb-0 text-white" style="font-weight: 800; line-height: 1; font-size: 26px;">EDSA</h3>
+                                <p class="mb-0 text-white" style="font-weight: 600; letter-spacing: 1px; font-size: 11px;">UIN AR-RANIRY</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                        <h6 class="site-footer-title mb-3">Contact</h6>
+                        <p>
+                            <strong class="d-inline me-2">Phone:</strong>
+                            <a href="http://wa.me/6283825450534" target="_blank">+62838 - 2545 - 0543</a> 
+                        </p>
+                        <p>
+                            <strong class="d-inline me-2">Email:</strong>
+                            <a href="mailto:edsa@ar-raniry.ac.id" target="_blank">edsa@ar-raniry.ac.id</a>  
+                        </p>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                        <h6 class="site-footer-title mb-3">Social</h6>
+                        <ul class="social-icon d-flex flex-wrap"> 
+                            <li class="social-icon-item"><a href="https://www.instagram.com/edsa_arraniry/" class="social-icon-link bi-instagram"></a></li>
+                            <li class="social-icon-item"><a href="https://x.com/edsauinar" class="social-icon-link bi-twitter"></a></li>
+                            <li class="social-icon-item"><a href="http://wa.me/6283825450534" class="social-icon-link bi-whatsapp"></a></li>
+                            <li class="social-icon-item"><a href="https://www.tiktok.com/@edsa_arraniry" class="social-icon-link bi-tiktok"></a></li>
+                            <li class="social-icon-item"><a href="https://www.youtube.com/@edsa_arraniry" class="social-icon-link bi-youtube"></a></li>
+                            <li class="social-icon-item"><a href="https://www.facebook.com/edsa.arraniry?locale=id_ID" class="social-icon-link bi-facebook"></a></li>
+                        </ul>
                     </div>
 
                     <div class="col-lg-2 col-12 text-center text-lg-end">
-                <p class="copyright-text mb-0">Copyright © 2025<br>EDSA Ar-Raniry</p>
-                <p class="copyright-text mb-0" style="font-size: 12px;">
-                    Designed by: <a href="https://teer.id/ahcoenk" target="_blank">Ahcoenk</a>
-                </p>
-                <p class="copyright-text mb-0" style="font-size: 12px; margin-top: 5px;">
-                    <a href="privacy-policy.html">Privacy Policy</a>
-                </p>
-            </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                <h6 class="site-footer-title mb-3">Contact</h6>
-                <p>
-                    <strong class="d-inline me-2">Phone:</strong>
-                    <a href="http://wa.me/6283825450534">+62838 - 2545 - 0543</a> 
-                </p>
-                <p>
-                    <strong class="d-inline me-2">Email:</strong>
-                    <a href="mailto:edsa@ar-raniry.ac.id">edsa@ar-raniry.co.id</a> 
-                </p>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                <h6 class="site-footer-title mb-3">Social</h6>
-                
-                <ul class="social-icon d-flex flex-wrap"> 
-                    <li class="social-icon-item">
-                        <a href="https://www.instagram.com/edsa_arraniry/" class="social-icon-link bi-instagram"></a>
-                    </li>
-                    <li class="social-icon-item">
-                        <a href="https://x.com/edsauinar" class="social-icon-link bi-twitter"></a>
-                    </li>
-                    <li class="social-icon-item">
-                        <a href="http://wa.me/6283825450534" class="social-icon-link bi-whatsapp"></a>
-                    </li>
-                    <li class="social-icon-item">
-                        <a href="https://www.tiktok.com/@edsa_arraniry" class="social-icon-link bi-tiktok"></a>
-                    </li>
-                    <li class="social-icon-item">
-                        <a href="https://www.youtube.com/@edsa_arraniry" class="social-icon-link bi-youtube"></a>
-                    </li>
-                    <li class="social-icon-item">
-                        <a href="mailto:edsa@ar-raniry.ac.id" class="social-icon-link bi-envelope-fill"></a>
-                    </li>
-                    <li class="social-icon-item">
-                        <a href="https://www.facebook.com/edsa.arraniry?locale=id_ID" class="social-icon-link bi-envelope-fill"></a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-lg-2 col-12 text-center text-lg-end">
                         <p class="copyright-text mb-0">Copyright © 2025<br>EDSA Ar-Raniry</p>
-                        <p class="copyright-text mb-0" style="font-size: 12px;">
-                            Designed by: <a href="https://teer.id/ahcoenk" target="_blank">Ahcoenk</a>
-                        </p>
+                        <p class="copyright-text mb-0" style="font-size: 12px;">Designed by: <a href="https://teer.id/ahcoenk" target="_blank">Ahcoenk</a></p>
                         <p class="copyright-text mb-0" style="font-size: 12px; margin-top: 5px;">
                             <a href="privacy-policy.html">Privacy Policy</a>
                         </p>
                     </div>
+
+                </div>
+            </div>
         </footer>
 
-        <!-- JAVASCRIPT FILES -->
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/owl.carousel.min.js"></script>
         <script src="js/custom.js"></script>
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry, index) => {
+                        if (entry.isIntersecting) {
+                            setTimeout(() => {
+                                entry.target.classList.add('is-visible');
+                            }, index * 100);
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.1
+                });
+
+                animatedElements.forEach(el => {
+                    observer.observe(el);
+                });
+            });
+        </script>
 
     </body>
 </html>

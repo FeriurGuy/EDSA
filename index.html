@@ -212,7 +212,7 @@
                                 <div class="col-5">
                                     <div class="custom-block-icon-wrap" style="width: 100%; height: 100%;">
                                         <div class="section-overlay"></div>
-                                        <a href="2025.html#International Seminar" class="custom-block-image-wrap" style="height: 100%;">
+                                        <a href="Intrnational Seminar.html" class="custom-block-image-wrap" style="height: 100%;">
                                             <img src="images/2025/internationalsemina 1.JPG" class="custom-block-image img-fluid" alt="" style="width: 100%; height: 100%; min-height: 200px; object-fit: cover;">
                                         </a>
                                     </div>
@@ -227,7 +227,7 @@
                                     </div>
 
                                     <h5 class="mb-2">
-                                        <a href="2025.html#International Seminar">
+                                        <a href="Intrnational Seminar.html">
                                             International Seminar
                                         </a>
                                     </h5>
@@ -695,40 +695,40 @@
             });
 
             document.addEventListener("DOMContentLoaded", () => {
-        const counters = document.querySelectorAll('.counter-number');
-        const speed = 200; // Kecepatan animasi
+                const counters = document.querySelectorAll('.counter-number');
+                const speed = 200; // Kecepatan animasi
 
-        const animateCounters = (entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const counter = entry.target;
-                    const target = +counter.getAttribute('data-target');
-                    
-                    const updateCount = () => {
-                        const count = +counter.innerText;
-                        const inc = target / speed;
+                const animateCounters = (entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const counter = entry.target;
+                            const target = +counter.getAttribute('data-target');
+                            
+                            const updateCount = () => {
+                                const count = +counter.innerText;
+                                const inc = target / speed;
 
-                        if (count < target) {
-                            counter.innerText = Math.ceil(count + inc);
-                            setTimeout(updateCount, 20);
-                        } else {
-                            counter.innerText = target;
+                                if (count < target) {
+                                    counter.innerText = Math.ceil(count + inc);
+                                    setTimeout(updateCount, 20);
+                                } else {
+                                    counter.innerText = target;
+                                }
+                            };
+                            updateCount();
+                            observer.unobserve(counter);
                         }
-                    };
-                    updateCount();
-                    observer.unobserve(counter);
-                }
+                    });
+                };
+
+                const observer = new IntersectionObserver(animateCounters, {
+                    threshold: 0.5
+                });
+
+                counters.forEach(counter => {
+                    observer.observe(counter);
+                });
             });
-        };
-
-        const observer = new IntersectionObserver(animateCounters, {
-            threshold: 0.5
-        });
-
-        counters.forEach(counter => {
-            observer.observe(counter);
-        });
-    });
         </script>
 
     </body>
