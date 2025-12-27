@@ -1729,3 +1729,169 @@ main {
     }
 }
 
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Style Clean & Rapi */
+.leader-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+.leader-subtitle {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 10px;
+}
+.modern-quote-box {
+    border-left: 4px solid var(--primary-color);
+    padding-left: 20px;
+    margin-top: 25px;
+}
+.modern-quote-text {
+    font-style: italic;
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.6;
+}
+/* KUNCI PERBAIKAN: Tinggi foto menyesuaikan layar */
+.leader-img {
+    height: 650px; /* Tinggi Desktop */
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+@media (max-width: 768px) {
+    .leader-img {
+        height: 220px; /* Tinggi HP (biar proporsional saat sejajar) */
+    }
+    .leader-title {
+        font-size: 2rem; /* Judul agak kecil dikit di HP */
+    }
+}
+
+/* Style Khusus Divisi */
+.division-card {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 15px; /* Sudut membulat modern */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 1px solid #f0f0f0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none !important; /* Hilangkan garis bawah link */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efek saat Hover */
+.division-card:hover {
+    background: var(--primary-color); /* Warna merah EDSA */
+    transform: translateY(-8px); /* Naik sedikit */
+    box-shadow: 0 15px 30px rgba(243, 67, 54, 0.25);
+    border-color: var(--primary-color);
+}
+
+/* Ubah warna teks & ikon jadi putih saat hover */
+.division-card i, .division-card h5, .division-card small {
+    transition: all 0.3s ease;
+}
+.division-card i {
+    color: var(--primary-color);
+}
+.division-card:hover i, 
+.division-card:hover h5 {
+    color: #ffffff !important;
+}
+.division-card:hover small {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Division Separator Style */
+            .division-separator {
+                text-align: center;
+                margin: 60px 0 40px 0;
+                position: relative;
+            }
+            .division-pill {
+                display: inline-block;
+                background: linear-gradient(45deg, var(--primary-color), #ff7e75);
+                color: white;
+                padding: 10px 30px;
+                border-radius: 50px;
+                font-family: 'Sono', sans-serif;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                box-shadow: 0 5px 15px rgba(243, 67, 54, 0.3);
+                position: relative;
+                z-index: 2;
+            }
+            .division-separator::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 80%;
+                height: 1px;
+                background: #e0e0e0;
+                z-index: 1;
+            }
+
+            /* Card Style Enhancement */
+            .team-thumb {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                border-radius: 10px;
+                overflow: hidden;
+                background: #fff;
+                height: 100%; 
+            }
+            .team-thumb:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+            }
+            .leader-img {
+                height: 400px;
+                width: 100%;
+                object-fit: cover;
+                object-position: top;
+            }
+            @media (max-width: 768px) {
+                .leader-img {
+                    height: 350px;
+                }
+            }
+
+            .btn-view-structure {
+                border: 2px solid var(--primary-color);
+                color: var(--primary-color);
+                border-radius: 50px;
+                padding: 8px 30px;
+                font-weight: 600;
+                transition: all 0.3s;
+                background: transparent;
+            }
+            .btn-view-structure:hover {
+                background: var(--primary-color);
+                color: #fff;
+            }
+

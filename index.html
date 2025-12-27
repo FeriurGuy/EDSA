@@ -29,64 +29,6 @@
 
         <link href="css/templatemo-pod-talk.css" rel="stylesheet">
 
-        <style>
-            .animate-on-scroll {
-                opacity: 0;
-                transform: translateY(50px);
-                transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-                will-change: opacity, transform;
-            }
-
-            .animate-on-scroll.is-visible {
-                opacity: 1;
-                transform: translateY(0);
-            }
-            /* Style Clean & Rapi */
-            .leader-title {
-                font-size: 2.5rem;
-                font-weight: 800;
-                line-height: 1.1;
-                letter-spacing: -1px;
-                margin-bottom: 15px;
-                color: var(--dark-color);
-            }
-            .leader-subtitle {
-                font-size: 0.9rem;
-                color: var(--primary-color);
-                font-weight: 700;
-                text-transform: uppercase;
-                letter-spacing: 2px;
-                display: block;
-                margin-bottom: 10px;
-            }
-            .modern-quote-box {
-                border-left: 4px solid var(--primary-color);
-                padding-left: 20px;
-                margin-top: 25px;
-            }
-            .modern-quote-text {
-                font-style: italic;
-                font-size: 1.05rem;
-                color: #555;
-                line-height: 1.6;
-            }
-            /* KUNCI PERBAIKAN: Tinggi foto menyesuaikan layar */
-            .leader-img {
-                height: 650px; /* Tinggi Desktop */
-                width: 100%;
-                object-fit: cover;
-                object-position: top;
-            }
-            @media (max-width: 768px) {
-                .leader-img {
-                    height: 220px; /* Tinggi HP (biar proporsional saat sejajar) */
-                }
-                .leader-title {
-                    font-size: 2rem; /* Judul agak kecil dikit di HP */
-                }
-            }
-        </style>
-
     </head>
 
     <div id="preloader">
@@ -209,7 +151,7 @@
                             <div class="custom-block py-4 px-3 px-md-5">
                                 <div class="row align-items-center text-center">
                                     
-                                    <div class="col-6 col-md-3 mb-3 mb-md-0">
+                                    <div class="col-6 col-md-3 mb-3 mb-md-0 animate-on-scroll">
                                         <div class="counter-item">
                                             <i class="bi bi-person-check-fill display-5 mb-2" style="color: #ff0000;"></i>
                                             <h2 class="counter-number fw-bold mb-0 fs-2" data-target="75">0</h2>
@@ -217,7 +159,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-6 col-md-3 mb-3 mb-md-0">
+                                    <div class="col-6 col-md-3 mb-3 mb-md-0 animate-on-scroll">
                                         <div class="counter-item">
                                             <i class="bi bi-envelope-fill display-5 mb-2" style="color: #ff0000;"></i>
                                             <h2 class="counter-number fw-bold mb-0 fs-2" data-target="1500">0</h2>
@@ -225,7 +167,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-6 col-md-3 mt-2 mt-md-0">
+                                    <div class="col-6 col-md-3 mt-2 mt-md-0 animate-on-scroll">
                                         <div class="counter-item">
                                             <i class="bi bi-calendar-check-fill display-5 mb-2" style="color: #ff0000;"></i>
                                             <h2 class="counter-number fw-bold mb-0 fs-2" data-target="120">0</h2>
@@ -233,7 +175,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-6 col-md-3 mt-2 mt-md-0">
+                                    <div class="col-6 col-md-3 mt-2 mt-md-0 animate-on-scroll">
                                         <div class="counter-item">
                                             <i class="bi bi-person-lines-fill display-5 mb-2" style="color: #ff0000;"></i>
                                             <h2 class="counter-number fw-bold mb-0 fs-2" data-target="6">0</h2>
@@ -250,11 +192,11 @@
                                 <span class="leader-subtitle">The Leadership</span>
                                 <h2 class="leader-title">DRIVING CHANGE,<br>BUILDING <span style="color: var(--primary-color);">LEGACY.</span></h2>
                                 
-                                <p class="mt-3 text-secondary">
+                                <p class="mt-3 text-secondary animate-on-scroll">
                                     EDSA Period 2025/2026 is dedicated to fostering a creative and inclusive environment for all English Department students.
                                 </p>
 
-                                <div class="modern-quote-box">
+                                <div class="modern-quote-box animate-on-scroll">
                                     <p class="modern-quote-text mb-3">
                                         "Welcome to our digital home! We are here to serve, inspire, and grow together. Let's turn our vision into reality and make this period a milestone of achievement."
                                     </p>
@@ -313,6 +255,67 @@
                                             </ul>
                                         </div>    
                                     </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-12 mt-2 mb-5 animate-on-scroll">
+        
+                            <div class="text-center mb-5 animate-on-scroll">
+                                <h2 class="fw-bold mb-2">Our Divisions</h2>
+                                <p class="text-muted">Six pillars supporting our community</p>
+                                <div style="width: 50px; height: 3px; background: var(--primary-color); margin: 0 auto;"></div>
+                            </div>
+
+                            <div class="row g-3 g-md-4 text-center justify-content-center">
+
+                                <div class="col-6 col-md-4 col-lg-2 animate-on-scroll">
+                                    <a href="Presidential.html" class="division-card shadow-sm">
+                                        <i class="bi bi-person-badge-fill display-5 mb-3"></i>
+                                        <h5 class="fw-bold fs-6">Presidential</h5>
+                                        <small class="text-muted d-none d-md-block" style="font-size: 11px;">Core Leaders</small>
+                                    </a>
+                                </div>
+
+                                <div class="col-6 col-md-4 col-lg-2 animate-on-scroll">
+                                    <a href="ECO.html" class="division-card shadow-sm">
+                                        <i class="bi bi-mortarboard-fill display-5 mb-3"></i>
+                                        <h5 class="fw-bold fs-6">ECO</h5>
+                                        <small class="text-muted d-none d-md-block" style="font-size: 11px;">Events Coordination</small>
+                                    </a>
+                                </div>
+
+                                <div class="col-6 col-md-4 col-lg-2 animate-on-scroll">
+                                    <a href="HRD.html" class="division-card shadow-sm">
+                                        <i class="bi bi-envelope-fill display-5 mb-3"></i>
+                                        <h5 class="fw-bold fs-6">HRD</h5>
+                                        <small class="text-muted d-none d-md-block" style="font-size: 11px;">Human Resources</small>
+                                    </a>
+                                </div>
+
+                                <div class="col-6 col-md-4 col-lg-2 animate-on-scroll">
+                                    <a href="IT.html" class="division-card shadow-sm">
+                                        <i class="bi bi-laptop-fill display-5 mb-3"></i>
+                                        <h5 class="fw-bold fs-6">IT</h5>
+                                        <small class="text-muted d-none d-md-block" style="font-size: 11px;">Info & Tech</small>
+                                    </a>
+                                </div>
+
+                                <div class="col-6 col-md-4 col-lg-2 animate-on-scroll">
+                                    <a href="SC.html" class="division-card shadow-sm">
+                                        <i class="bi bi-tools display-5 mb-3"></i>
+                                        <h5 class="fw-bold fs-6">SC</h5>
+                                        <small class="text-muted d-none d-md-block" style="font-size: 11px;">Tools & Creative</small>
+                                    </a>
+                                </div>
+
+                                <div class="col-6 col-md-4 col-lg-2 animate-on-scroll">
+                                    <a href="PRC.html" class="division-card shadow-sm">
+                                        <i class="bi bi-megaphone-fill display-5 mb-3"></i>
+                                        <h5 class="fw-bold fs-6">PRC</h5>
+                                        <small class="text-muted d-none d-md-block" style="font-size: 11px;">Public Relations</small>
+                                    </a>
                                 </div>
 
                             </div>
