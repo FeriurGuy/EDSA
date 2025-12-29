@@ -1,7 +1,6 @@
 # 🇬🇧 EDSA UIN Ar-Raniry - Official Web Profile
 
-![EDSA Banner](images/edsaa.png) **EDSA**
-                                 **Official Digital Platform for English Department Student Association, UIN Ar-Raniry.**
+![EDSA Banner](images/edsaa.png) > **Official Digital Platform for English Department Student Association, UIN Ar-Raniry.**
 
 Website profil resmi untuk **English Department Student Association (EDSA)** UIN Ar-Raniry Banda Aceh. Website ini berfungsi sebagai pusat informasi kegiatan, struktur organisasi, dan galeri dokumentasi mahasiswa PBI.
 
