@@ -1,6 +1,6 @@
 # 🇬🇧 EDSA UIN Ar-Raniry - Official Web Profile
 
-![EDSA Banner](images/EDSA.png) > **"Driving Change, Building Legacy."**
+![EDSA Banner](images/edsaa.png) > **"Driving Change, Building Legacy."**
 
 Website profil resmi untuk **English Department Student Association (EDSA)** UIN Ar-Raniry Banda Aceh. Website ini berfungsi sebagai pusat informasi kegiatan, struktur organisasi, dan galeri dokumentasi mahasiswa PBI.
 
