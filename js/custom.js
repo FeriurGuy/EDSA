@@ -88,3 +88,62 @@ window.onclick = function(event) {
         closeVideo();
     }
 }
+
+/*---------------------------------------
+  Gallery              
+-----------------------------------------*/
+// --- SCRIPT MODAL POPUP & CAPTION ---
+const imageModal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImg");
+const modalCaption = document.getElementById("modalCaption");
+
+const galleryItems = document.querySelectorAll('.gallery-item');
+
+// 1. Logic Buka Modal + Ambil Caption
+galleryItems.forEach(item => {
+    item.addEventListener('click', function() {
+        const img = this.querySelector('img');
+        if (img) {
+            imageModal.style.display = "flex"; 
+            modalImg.src = img.src; 
+            
+            // AMBIL DATA CAPTION
+            const captionText = img.getAttribute('data-caption');
+            
+            // Kalau ada caption, tampilin. Kalau nggak ada, sembunyiin teksnya.
+            if (captionText) {
+                modalCaption.innerText = captionText;
+                modalCaption.style.display = "inline-block";
+            } else {
+                modalCaption.style.display = "none";
+            }
+        }
+    });
+});
+
+// 2. Logic Tutup Modal
+function closeImage() {
+    imageModal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == imageModal) {
+        closeImage();
+    }
+}
+
+// --- ANIMASI SCROLL ---
+document.addEventListener("DOMContentLoaded", function () {
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => { 
+                    entry.target.classList.add('is-visible'); 
+                }, index * 50);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+    animatedElements.forEach(el => observer.observe(el));
+});

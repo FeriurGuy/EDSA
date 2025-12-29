@@ -4,7 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="EDSA Gallery">
-        <meta name="author" content="EDSA Team">
+        <meta name="author" content="Feri Ramadhan Azhari | IT Minister">
+        
         <title>EDSA - Our Gallery</title>
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -88,11 +89,12 @@
         </style>
     </head>
 
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="bi-arrow-up"></i></button>
+
     <body>
         
         <div id="imageModal" class="video-modal">
             <div class="modal-content" style="background: transparent; width: auto; max-width: 90%; text-align: center; position: relative;">
-                <span class="close-btn" onclick="closeImage()" style="position: absolute; top: -40px; right: 0; font-size: 40px; color: white; cursor: pointer; text-shadow: 0 2px 5px rgba(0,0,0,0.5);">×</span>
                 
                 <img id="modalImg" src="" style="max-width: 100%; max-height: 80vh; border-radius: 10px; box-shadow: 0 10px 40px rgba(0,0,0,0.6);">
                 
@@ -113,9 +115,10 @@
 
         <main>
             <nav class="navbar navbar-expand-lg sticky-top">
-                <div class="container">
+                <div class="container align-items-left">
+                    
                     <div class="navbar-brand-group d-flex align-items-center">
-                        <a class="brand-item" href="https://www.instagram.com/pbiarraniry">
+                        <a class="brand-item" href="https://www.instagram.com/pbiarraniry" target="_blank">
                             <img src="images/UIN Ar-Raniry.png" class="brand-logo img-fluid" alt="Logo UIN">
                             <div class="brand-text">
                                 <span class="brand-title">Pendidikan</span>
@@ -128,19 +131,30 @@
                             <img src="images/EDSA.png" class="brand-logo img-fluid" alt="Logo EDSA">
                             <div class="brand-text">
                                 <span class="brand-title">EDSA</span>
-                                <span class="brand-subtitle description">English Dept. Student<br>Association</span>
+                                <span class="brand-subtitle description">English Department Student<br>Association UIN Ar-Raniry</span>
                             </div>
                         </a>
                     </div>
-                    <button class="navbar-toggler custom-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+                    <button class="navbar-toggler custom-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
+
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto align-items-center">
-                            <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
-                            <li class="nav-item"><a class="nav-link active" href="gallery.html">GALLERY</a></li> 
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about us.html">ABOUT US</a>
+                            </li>
+
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">OUR DIVISIONS</a>
+                                <a class="nav-link dropdown-toggle d-flex justify-content-between align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    OUR DIVISIONS
+                                    <span class="arrow-icon"></span>
+                                </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="ECO.html">ECO</a></li>
                                     <li><a class="dropdown-item" href="HRD.html">HRD</a></li>
@@ -150,7 +164,36 @@
                                     <li><a class="dropdown-item" href="PRC.html">PRC</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+                            
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle d-flex justify-content-between align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    OUR PAST EVENTS
+                                    <span class="arrow-icon"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="2025.html">2025</a></li>
+                                    <li><a class="dropdown-item" href="2024.html">2024</a></li>
+                                    <li><a class="dropdown-item" href="2023.html">2023</a></li>
+                                    <li><a class="dropdown-item" href="2022.html">2022</a></li>
+                                    <li><a class="dropdown-item" href="2021.html">2021</a></li>
+                                    <li><a class="dropdown-item" href="2020.html">2020</a></li>
+                                    <li><a class="dropdown-item" href="2019.html">2019</a></li>
+                                    <li><a class="dropdown-item" href="2018 below.html">2018 below</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle d-flex justify-content-between align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    MORE
+                                    <span class="arrow-icon"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="Former President.html">Former President</a></li>
+                                    <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                                    <li><a class="dropdown-item active" href="our-gallery.html">Our Gallery</a></li>
+                                </ul>
+                            </li>
+
                         </ul>
                     </div>
                 </div>
@@ -172,125 +215,185 @@
                 </div>
             </header>
 
-            <section class="section-padding pb-0">
+            <section class="section-padding pb-0 pt-4 mt-0">
                 <div class="container">
                     <div class="gallery-wrapper">
                         
                         <div class="gallery-item animate-on-scroll">
-                            <img src="https://picsum.photos/id/10/600/800" data-caption="Pemandangan Indah saat Outbound 2024" alt="Gallery" loading="lazy">
+                            <img src="images/Gallery/EDSA Open Recruitment Interview 2025.jpeg" data-caption="EDSA Open Recruitment Interview 2025" alt="Gallery" loading="lazy">
                             <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
                         </div>
                         
                         <div class="gallery-item animate-on-scroll">
-                            <img src="https://picsum.photos/id/11/800/600" data-caption="EDSA FAIR: Pearl 2023" alt="Gallery" loading="lazy">
+                            <img src="images/Gallery/Mubes EDSA 2024.JPG" data-caption="Mubes (Musyawarah Besar) | EDSA 2024" alt="Gallery" loading="lazy">
+                            <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
+                        </div>
+
+                        <div class="gallery-item animate-on-scroll">
+                            <img src="images/Gallery/WhatsApp Image 2025-12-29 at 9.10.54 PM.jpeg" data-caption="EDSA Batik Day | 2025 " alt="Gallery" loading="lazy">
                             <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
                         </div>
                         
                         <div class="gallery-item animate-on-scroll">
-                            <img src="https://picsum.photos/id/12/600/600" data-caption="Rapat Kerja Pengurus 2025" alt="Gallery" loading="lazy">
+                            <img src="images/Gallery/DSC03834.JPG" data-caption="EDSA PDH Day | 2025" alt="Gallery" loading="lazy">
                             <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
                         </div>
 
                         <div class="gallery-item animate-on-scroll">
-                            <img src="https://picsum.photos/id/13/600/900" data-caption="Inauguration Night - Seni & Kreativitas" alt="Gallery" loading="lazy">
+                            <img src="images/Gallery/IMG_7731.JPG" data-caption="PBAK | 2025" alt="Gallery" loading="lazy">
                             <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
                         </div>
 
                         <div class="gallery-item animate-on-scroll">
-                            <img src="https://picsum.photos/id/14/800/500" data-caption="Kunjungan ke Panti Asuhan" alt="Gallery" loading="lazy">
+                            <img src="images/2025/2024.jpg" data-caption="EDSA Cup | 2024" alt="Gallery" loading="lazy">
                             <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
                         </div>
 
                         <div class="gallery-item animate-on-scroll">
-                            <img src="https://picsum.photos/id/15/600/800" data-caption="Wisuda Angkatan 2020" alt="Gallery" loading="lazy">
+                            <img src="https://sumberpost.com/wp-content/uploads/2022/06/IMG-20220606-WA0003.jpg" data-caption="Mubes EDSA 2021" alt="Gallery" loading="lazy">
                             <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
                         </div>
 
                         <div class="gallery-item animate-on-scroll">
-                            <img src="https://picsum.photos/id/16/600/600" data-caption="Suasana PBAK Hari Pertama" alt="Gallery" loading="lazy">
+                            <img src="https://sumberpost.com/wp-content/uploads/2024/06/WhatsApp-Image-2024-06-01-at-20.58.34-1405x1536.jpeg" data-caption="Ten Humanity Action 2024" alt="Gallery" loading="lazy">
                             <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
                         </div>
 
                         <div class="gallery-item animate-on-scroll">
-                            <img src="https://picsum.photos/id/17/800/600" data-caption="Lomba Debat Bahasa Inggris" alt="Gallery" loading="lazy">
+                            <img src="https://sumberpost.com/wp-content/uploads/2022/03/IMG-20220311-WA0006.jpg" data-caption="EDSA Goes to School | 2022" alt="Gallery" loading="lazy">
                             <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
                         </div>
 
                         <div class="gallery-item animate-on-scroll">
-                            <img src="https://picsum.photos/id/18/600/800" data-caption="Buka Puasa Bersama (Mega Iftar)" alt="Gallery" loading="lazy">
+                            <img src="https://sumberpost.com/wp-content/uploads/2022/03/IMG-20220327-WA0076.jpg" data-caption="EDSA League | 2022" alt="Gallery" loading="lazy">
                             <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
                         </div>
                         
                         <div class="gallery-item animate-on-scroll">
-                            <img src="https://picsum.photos/id/19/800/600" data-caption="Foto Bersama Dosen PBI" alt="Gallery" loading="lazy">
+                            <img src="images/Gallery/WhatsApp Image 2025-12-29 at 9.15.58 PM.jpeg" data-caption="EDSA Corner | 2025" alt="Gallery" loading="lazy">
                             <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
                         </div>
                         <div class="gallery-item animate-on-scroll">
-                            <img src="https://picsum.photos/id/20/600/850" data-caption="Seminar Internasional 2025" alt="Gallery" loading="lazy">
+                            <img src="images/Gallery/WhatsApp Image 2025-12-29 at 9.11.53 PM.jpeg" data-caption="Kunjungan EDSA IAIN Langsa | 2025" alt="Gallery" loading="lazy">
                             <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
                         </div>
                         <div class="gallery-item animate-on-scroll">
-                            <img src="https://picsum.photos/id/22/800/550" data-caption="Gotong Royong Sekretariat" alt="Gallery" loading="lazy">
+                            <img src="images/Gallery/WhatsApp Image 2025-12-29 at 9.10.01 PM.jpeg" data-caption="Rapat Evaluasi Program Kerja Pengurus EDSA | 2025" alt="Gallery" loading="lazy">
                             <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
                         </div>
                         <div class="gallery-item animate-on-scroll">
-                            <img src="https://picsum.photos/id/28/600/750" data-caption="Camping Ceria English Club" alt="Gallery" loading="lazy">
+                            <img src="images/Gallery/WhatsApp Image 2025-12-29 at 9.07.53 PM.jpeg" data-caption="Kabinet EDSA 2025/2026" alt="Gallery" loading="lazy">
                             <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
                         </div>
                         <div class="gallery-item animate-on-scroll">
-                            <img src="https://picsum.photos/id/29/800/600" data-caption="Donor Darah Bersama PMI" alt="Gallery" loading="lazy">
+                            <img src="images/Gallery/IMG_2703.JPG" data-caption="Peusijuk Mahasiswa Baru | 2025" alt="Gallery" loading="lazy">
                             <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
                         </div>
                         <div class="gallery-item animate-on-scroll">
-                            <img src="https://picsum.photos/id/40/600/800" data-caption="Upgrading Pengurus Baru" alt="Gallery" loading="lazy">
+                            <img src="images/Gallery/IMG_0632.JPG" data-caption="Pelantikan Kepengurusan EDSA | 2025" alt="Gallery" loading="lazy">
                             <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
                         </div>
                         <div class="gallery-item animate-on-scroll">
-                            <img src="https://picsum.photos/id/41/800/600" data-caption="English Contest 2024" alt="Gallery" loading="lazy">
+                            <img src="images/2025/ten humanity.JPG" data-caption="TEN Humanity Action | 2025" alt="Gallery" loading="lazy">
                             <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
                         </div>
                         <div class="gallery-item animate-on-scroll">
-                            <img src="https://picsum.photos/id/42/600/600" data-caption="Malam Keakraban" alt="Gallery" loading="lazy">
+                            <img src="https://sumberpost.com/wp-content/uploads/2015/04/11120533_953975917954810_2159241697223378762_n-640x360.jpg" data-caption="Pembukaan EDSA FAIR | 2015" alt="Gallery" loading="lazy">
                             <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
                         </div>
                         <div class="gallery-item animate-on-scroll">
-                            <img src="https://picsum.photos/id/43/600/900" data-caption="Podcast Session" alt="Gallery" loading="lazy">
+                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWcB0Pn0fKWQicTYcXprN8RzHFo9SMaBKvpFWHlS54gXiMn4bEAFjVRxghgHU6sDnTPOksSgDqVkeyVFTW3ERtQfNiHCnyayRtKrF1ZUOsWHeGxhDyNTPlbwE5BMtK54rl0G6m2dyUTC0U/s320/IMG_6599.JPG" data-caption="Iftar Jam'i EDSA | 2017" alt="Gallery" loading="lazy">
                             <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
                         </div>
                         <div class="gallery-item animate-on-scroll">
-                            <img src="https://picsum.photos/id/44/800/500" data-caption="Bakti Sosial Mahasiswa" alt="Gallery" loading="lazy">
+                            <img src="images/Gallery/WhatsApp Image 2025-12-29 at 9.13.09 PM.jpeg" data-caption="Presidential EDSA Period 2025/2026" alt="Gallery" loading="lazy">
                             <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
                         </div>
                         <div class="gallery-item animate-on-scroll">
-                            <img src="https://picsum.photos/id/45/600/800" data-caption="Tour De Sabang" alt="Gallery" loading="lazy">
+                            <img src="images/Gallery/pembubaran.jpeg" data-caption="Pembubaran Panitia PBAK 2024" alt="Gallery" loading="lazy">
                             <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
                         </div>
                         <div class="gallery-item animate-on-scroll">
-                            <img src="https://picsum.photos/id/48/600/600" data-caption="Workshop Public Speaking" alt="Gallery" loading="lazy">
+                            <img src="images/Gallery/si ol.jpeg" data-caption="Si ol marahin DPH EDSA | PBAK 2023" alt="Gallery" loading="lazy">
                             <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
                         </div>
                         <div class="gallery-item animate-on-scroll">
-                            <img src="https://picsum.photos/id/49/800/600" data-caption="Pekan Olahraga Mahasiswa" alt="Gallery" loading="lazy">
+                            <img src="images/Gallery/WhatsApp Image 2025-12-29 at 9.43.22 PM.jpeg" data-caption="ICT Division EDSA 2023/2024" alt="Gallery" loading="lazy">
                             <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
                         </div>
                         <div class="gallery-item animate-on-scroll">
-                            <img src="https://picsum.photos/id/54/600/800" data-caption="Drama Performance" alt="Gallery" loading="lazy">
+                            <img src="https://sumberpost.com/wp-content/uploads/2017/12/warek-buka-edsa-fair-640x360.jpg" data-caption="EDSA FAIR | 2017" alt="Gallery" loading="lazy">
                             <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
                         </div>
                         <div class="gallery-item animate-on-scroll">
-                            <img src="https://picsum.photos/id/55/800/600" data-caption="Cooking Competition" alt="Gallery" loading="lazy">
+                            <img src="https://sumberpost.com/wp-content/uploads/2023/11/WhatsApp-Image-2023-11-03-at-22.48.10.jpeg" data-caption="EDSA FAIR | 2023" alt="Gallery" loading="lazy">
                             <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
                         </div>
                         <div class="gallery-item animate-on-scroll">
-                            <img src="https://picsum.photos/id/57/600/850" data-caption="Halal Bi Halal EDSA" alt="Gallery" loading="lazy">
+                            <img src="https://sumberpost.com/wp-content/uploads/2020/04/IMG-20200422-WA0034.jpg" data-caption="Prodi PBI bersama EDSA Salurkan Donasi untuk Tenaga Medis" alt="Gallery" loading="lazy">
                             <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
                         </div>
                         <div class="gallery-item animate-on-scroll">
-                            <img src="https://picsum.photos/id/58/800/550" data-caption="Farewell Party" alt="Gallery" loading="lazy">
+                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxe1hyphenhyphenqMQ4C6XErEkStFPtXYJMm08Rb92EO0gIFFfIVt3hKsVyIKPaZkJ1aMVGxwYzZaohi_FvzLR3QMWowMDP-a4B4XRrgzlJhBLwPJYdPXik5ArQpC3k_0OgrT646nOpUQgfotZ4AqYF/s1600/IMG-20200516-WA0018.jpg" data-caption="Prodi PBI UIN Ar Raniry dan EDSA Kembali Salurkan Sembako Untuk Masyarakat Terdampak Covid-19" alt="Gallery" loading="lazy">
                             <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
                         </div>
                         <div class="gallery-item animate-on-scroll">
-                            <img src="https://picsum.photos/id/59/600/750" data-caption="EDSA Family Gathering" alt="Gallery" loading="lazy">
+                            <img src="https://sumberpost.com/wp-content/uploads/2021/01/WhatsApp-Image-2021-01-23-at-21.04.49.jpeg" data-caption="EDSA Goes to Ma'had | 2021" alt="Gallery" loading="lazy">
+                            <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
+                        </div>
+
+                        <div class="gallery-item animate-on-scroll">
+                            <img src="https://kabardaily.com/wp-content/uploads/2023/04/FB_IMG_1680450070013-768x512.jpg" data-caption="Mega Iftar dan Santunan Anak Yatim | 2023" alt="Gallery" loading="lazy">
+                            <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
+                        </div>
+
+                        <div class="gallery-item animate-on-scroll">
+                            <img src="https://sumberpost.com/wp-content/uploads/2024/03/WhatsApp-Image-2024-03-28-at-09.50.50-1536x1152.jpeg" data-caption="Mega Iftar dan Santunan Anak Yatim | 2024" alt="Gallery" loading="lazy">
+                            <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
+                        </div>
+
+                        <div class="gallery-item animate-on-scroll">
+                            <img src="https://sumberpost.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-17-at-20.13.52-1536x1152.jpeg" data-caption="EDSA Fair International Seminar | 2024" alt="Gallery" loading="lazy">
+                            <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
+                        </div>
+
+                        <div class="gallery-item animate-on-scroll">
+                            <img src="images/2025/edsa kareem.jpg" data-caption="EDSA Ramadhan Kareem | 2025" alt="Gallery" loading="lazy">
+                            <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
+                        </div>
+
+                        <div class="gallery-item animate-on-scroll">
+                            <img src="images/2025/edsa x meby.jpg" data-caption="EDSA x MEBY (Make Everyone Better Youth) | 2025" alt="Gallery" loading="lazy">
+                            <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
+                        </div>
+
+                        <div class="gallery-item animate-on-scroll">
+                            <img src="https://sumberpost.com/wp-content/uploads/2025/06/9445aaad-0657-4a9f-a24c-62bc120df7f2-1536x864.jpeg" data-caption="EDSA x EdUSA Aceh Essay Workshop | 2025" alt="Gallery" loading="lazy">
+                            <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
+                        </div>
+
+                        <div class="gallery-item animate-on-scroll">
+                            <img src="https://sumberpost.com/wp-content/uploads/2018/05/IMG-20180519-WA0041-640x360.jpg" data-caption="Tim EDSA Ramadhan Aceh Traveller | 2018" alt="Gallery" loading="lazy">
+                            <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
+                        </div>
+
+                        <div class="gallery-item animate-on-scroll">
+                            <img src="https://sumberpost.com/wp-content/uploads/2018/05/Screenshot_2018-05-24-11-26-21-027_com.whatsapp-640x360.png" data-caption="EDSA Tausyiah Dhuha Ramadhan | 2018" alt="Gallery" loading="lazy">
+                            <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
+                        </div>
+
+                        <div class="gallery-item animate-on-scroll">
+                            <img src="https://sumberpost.com/wp-content/uploads/2018/04/IMG-20180408-WA0028-640x360.jpg" data-caption="EDSA Family Gathering | 2018" alt="Gallery" loading="lazy">
+                            <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
+                        </div>
+
+                        <div class="gallery-item animate-on-scroll">
+                            <img src="https://sumberpost.com/wp-content/uploads/2015/05/IMG_5300-640x360.jpg" data-caption="Posko EDSA Peduli Ronghiya | 2015" alt="Gallery" loading="lazy">
+                            <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
+                        </div>
+
+                        <div class="gallery-item animate-on-scroll">
+                            <img src="https://sumberpost.com/wp-content/uploads/2023/06/WhatsApp-Image-2023-06-14-at-18.22.44.jpeg" data-caption="EDSA AlumniTalk | 2023" alt="Gallery" loading="lazy">
                             <div class="gallery-overlay"><i class="bi bi-eye"></i></div>
                         </div>
 
@@ -302,56 +405,73 @@
         <footer class="site-footer">
             <div class="container">
                 <div class="row align-items-start">
-                    <div class="col-lg-3 col-12 mb-4 mb-lg-0">
-                        <div class="d-flex align-items-center">
-                            <div class="d-flex me-2">
-                                <a class="navbar-brand me-0" href="https://www.instagram.com/pbiarraniry">
-                                    <img src="images/UIN Ar-Raniry.png" class="logo-image img-fluid" alt="Logo UIN">
-                                </a>
-                                <a class="navbar-brand" href="index.html" style="margin-left: 5px;">
-                                    <img src="images/EDSA.png" class="logo-image img-fluid" alt="logo" style="width: 53px; height: auto; max-width: none;">
-                                </a>
-                            </div>
-                            <div class="text-white">
-                                <h3 class="mb-0 text-white" style="font-weight: 800; line-height: 1; font-size: 26px;">EDSA</h3>
-                                <p class="mb-0 text-white" style="font-weight: 600; letter-spacing: 1px; font-size: 11px;">UIN AR-RANIRY</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                        <h6 class="site-footer-title mb-3">Contact us</h6>
-                        <p><strong class="d-inline me-2">Phone:</strong> <a href="http://wa.me/6283825450534" target="_blank">+62838 - 2545 - 0543</a></p>
-                        <p><strong class="d-inline me-2">Email:</strong> <a href="mailto:edsa@ar-raniry.ac.id" target="_blank">edsa@ar-raniry.ac.id</a></p>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                        <h6 class="site-footer-title mb-3">Social</h6>
-                        <ul class="social-icon d-flex flex-wrap"> 
-                            <li class="social-icon-item"><a href="https://www.instagram.com/edsa_arraniry/" target="_blank" class="social-icon-link bi-instagram"></a></li>
-                            <li class="social-icon-item"><a href="https://x.com/edsauinar" target="_blank" class="social-icon-link bi-twitter"></a></li>
-                            <li class="social-icon-item"><a href="http://wa.me/6283825450534" target="_blank" class="social-icon-link bi-whatsapp"></a></li>
-                            <li class="social-icon-item"><a href="https://www.tiktok.com/@edsa_arraniry" target="_blank" class="social-icon-link bi-tiktok"></a></li>
-                            <li class="social-icon-item"><a href="https://www.youtube.com/@edsa_arraniry" target="_blank" class="social-icon-link bi-youtube"></a></li>
-                            <li class="social-icon-item"><a href="https://www.facebook.com/edsa.arraniry?locale=id_ID" target="_blank" class="social-icon-link bi-facebook"></a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-2 col-12 text-center text-lg-end">
-                        <p class="copyright-text mb-0">Copyright © 2025<br>EDSA Ar-Raniry</p>
-                        <p class="copyright-text mb-0" style="font-size: 12px;">Designed by: <a href="https://teer.id/ahcoenk" target="_blank">Ahcoenk</a></p>
+
+            <div class="col-lg-3 col-12 mb-4 mb-lg-0">
+                <div class="d-flex align-items-center">
+                    
+                    <div class="d-flex me-2">
+                        <a class="navbar-brand me-0" href="index.html">
+                            <img src="images/UIN Ar-Raniry.png" class="logo-image img-fluid" alt="logo" 
+                                 style="width: 50px; height: auto; max-width: none;">
+                        </a>
+                        <a class="navbar-brand" href="index.html" style="margin-left: 5px;">
+                            <img src="images/EDSA.png" class="logo-image img-fluid" alt="logo" 
+                                 style="width: 53px; height: auto; max-width: none;">
+                        </a>
                     </div>
 
-                    <div class="col-12 mt-5 pt-4 border-top" style="border-color: rgba(255,255,255,0.1) !important;">
-                        <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center">
-                            <h6 class="site-footer-title mb-2 mb-md-0 me-md-4 text-nowrap">Fast Link:</h6>
-                            <div style="overflow-x: auto; width: 100%; -webkit-overflow-scrolling: touch;">
-                                <ul class="site-footer-links d-flex flex-nowrap align-items-center mb-0 p-0" style="gap: 20px; list-style: none; padding-bottom: 5px;">
-                                    <li class="site-footer-link-item mb-0 flex-shrink-0"><a href="https://tarbiyah.ar-raniry.ac.id/" target="_blank" class="site-footer-link"><strong>FTK Ar-Raniry</strong></a></li>
-                                    <li class="site-footer-link-item mb-0 flex-shrink-0"><a href="https://jurnal.ar-raniry.ac.id/index.php/englisia" target="_blank" class="site-footer-link"><strong>Englisia Journal</strong></a></li>
-                                    <li class="site-footer-link-item mb-0 flex-shrink-0"><a href="about us.html" class="site-footer-link"><strong>About PBI</strong></a></li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="text-white">
+                        <h3 class="mb-0 text-white" style="font-weight: 800; line-height: 1; font-size: 26px;">EDSA</h3>
+                        <p class="mb-0 text-white" style="font-weight: 600; letter-spacing: 1px; font-size: 11px;">UIN AR-RANIRY</p>
                     </div>
                 </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                <h6 class="site-footer-title mb-3">Contact</h6>
+                <p>
+                    <strong class="d-inline me-2">Phone:</strong>
+                    <a href="http://wa.me/6283825450534" target="_blank">+62838 - 2545 - 0543</a> 
+                </p>
+                <p>
+                    <strong class="d-inline me-2">Email:</strong>
+                    <a href="mailto:edsa@ar-raniry.ac.id" target="_blank">edsa@ar-raniry.ac.id</a> 
+                </p>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                <h6 class="site-footer-title mb-3">Social</h6>
+                
+                <ul class="social-icon d-flex flex-wrap"> 
+                    <li class="social-icon-item">
+                        <a href="https://www.instagram.com/edsa_arraniry/" target="_blank" class="social-icon-link bi-instagram"></a>
+                    </li>
+                    <li class="social-icon-item">
+                        <a href="https://x.com/edsauinar" target="_blank" class="social-icon-link bi-twitter"></a>
+                    </li>
+                    <li class="social-icon-item">
+                        <a href="http://wa.me/6283825450534" target="_blank" class="social-icon-link bi-whatsapp"></a>
+                    </li>
+                    <li class="social-icon-item">
+                        <a href="https://www.tiktok.com/@edsa_arraniry" target="_blank" class="social-icon-link bi-tiktok"></a>
+                    </li>
+                    <li class="social-icon-item">
+                        <a href="https://www.youtube.com/@edsa_arraniry" target="_blank" class="social-icon-link bi-youtube"></a>
+                    </li>
+                    <li class="social-icon-item">
+                        <a href="https://www.facebook.com/edsa.arraniry?locale=id_ID" target="_blank" class="social-icon-link bi-facebook"></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-12 text-center text-lg-end">
+                <p class="copyright-text mb-0">Copyright © 2025<br>EDSA Ar-Raniry</p>
+                <p class="copyright-text mb-0" style="font-size: 12px;">
+                    Designed by: <a href="https://teer.id/ahcoenk" target="_blank">Ahcoenk</a>
+                </p>
+                <p class="copyright-text mb-0" style="font-size: 12px; margin-top: 5px;">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                </p>
             </div>
         </footer>
 
