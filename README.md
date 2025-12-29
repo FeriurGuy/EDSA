@@ -24,7 +24,7 @@ Website ini dibangun dengan fokus pada desain modern, responsif, dan interaktif:
 * **Video & Podcast Integration:** Bagian khusus untuk menampilkan konten kreatif dari EDSA.
 * **Divisi & Struktur:** Halaman informasi lengkap mengenai divisi-divisi di EDSA (HRD, ECO, IT, dll).
 
-## Teknologi yang Digunakan
+## Infrastruktur
 
 * **Core:** HTML5, CSS3, JavaScript (Vanilla & jQuery).
 * **Framework CSS:** Bootstrap 5.
