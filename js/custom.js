@@ -107,10 +107,8 @@ galleryItems.forEach(item => {
             imageModal.style.display = "flex"; 
             modalImg.src = img.src; 
             
-            // AMBIL DATA CAPTION
             const captionText = img.getAttribute('data-caption');
             
-            // Kalau ada caption, tampilin. Kalau nggak ada, sembunyiin teksnya.
             if (captionText) {
                 modalCaption.innerText = captionText;
                 modalCaption.style.display = "inline-block";
@@ -121,7 +119,7 @@ galleryItems.forEach(item => {
     });
 });
 
-// 2. Logic Tutup Modal
+// 2. Tutup Modal
 function closeImage() {
     imageModal.style.display = "none";
 }

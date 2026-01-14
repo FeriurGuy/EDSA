@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="EDSA Download Center & Archives">
+        <meta name="author" content="Feri Ramadhan Azhari | IT Minister">
+        <title>EDSA - Archives & Downloads</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Sono:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-icons.css">
+        <link rel="icon" href="images/favicon.png" type="image/png" sizes="96x96">
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link href="css/templatemo-pod-talk.css" rel="stylesheet">
+
+        <style>
+            /* 1. ANIMASI & STYLE DASAR (Saya pertahankan seperti versi yang kamu suka) */
+            .section-header {
+                position: relative;
+                padding-bottom: 20px;
+                margin-bottom: 40px;
+            }
+            .section-header::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 60px;
+                height: 4px;
+                background: var(--primary-color);
+                border-radius: 2px;
+            }
+
+            .download-card {
+                background: #ffffff;
+                border: 1px solid rgba(0,0,0,0.05);
+                border-radius: 20px;
+                padding: 30px 20px;
+                transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                position: relative;
+                overflow: hidden;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+                height: 100%;
+                z-index: 1;
+            }
+
+            /* Efek Hover Card (Pop Up) */
+            .download-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+                border-color: var(--primary-color);
+            }
+
+            /* Style Khusus Gambar Logo (Biar rapi di tengah) */
+            .logo-wrapper {
+                height: 100px; /* Tinggi area gambar */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 20px;
+                transition: transform 0.4s ease;
+            }
+            
+            .logo-img {
+                max-height: 100%;
+                max-width: 100%;
+                object-fit: contain;
+                /* Drop shadow halus biar logo menyatu */
+                filter: drop-shadow(0 5px 5px rgba(0,0,0,0.1));
+            }
+
+            /* Efek Zoom pas di-hover (Gantiin efek putar icon) */
+            .download-card:hover .logo-wrapper {
+                transform: scale(1.1); 
+            }
+
+            /* Style Icon untuk SK (Tetap pakai icon bulat) */
+            .icon-wrapper {
+                width: 80px;
+                height: 80px;
+                background: rgba(var(--bs-primary-rgb), 0.1);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 20px auto;
+                transition: transform 0.4s ease;
+            }
+
+            .download-card:hover .icon-wrapper {
+                transform: rotateY(180deg);
+                background: var(--primary-color);
+            }
+
+            .download-card:hover .icon-wrapper i {
+                color: #fff !important;
+            }
+
+            .file-icon {
+                font-size: 2.5rem;
+                color: var(--primary-color);
+                transition: color 0.3s ease;
+            }
+
+            .year-badge {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                background: #f8f9fa;
+                padding: 5px 12px;
+                border-radius: 30px;
+                font-size: 0.8rem;
+                font-weight: 700;
+                color: #666;
+                border: 1px solid #eee;
+            }
+
+            .btn-download-custom {
+                width: 100%;
+                border-radius: 50px;
+                padding: 10px;
+                background: transparent;
+                border: 2px solid var(--primary-color);
+                color: var(--primary-color);
+                font-weight: 600;
+                margin-top: 20px;
+                transition: all 0.3s ease;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .btn-download-custom:hover {
+                background: var(--primary-color);
+                color: white;
+                box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+            }
+
+            /* Animasi Fade In */
+            .animate-up {
+                opacity: 0;
+                transform: translateY(30px);
+                animation: fadeInUp 0.8s forwards;
+            }
+
+            @keyframes fadeInUp {
+                to { opacity: 1; transform: translateY(0); }
+            }
+            
+            .delay-1 { animation-delay: 0.1s; }
+            .delay-2 { animation-delay: 0.2s; }
+            .delay-3 { animation-delay: 0.3s; }
+            .delay-4 { animation-delay: 0.4s; }
+        </style>
+    </head>
+    
+    <body>
+        <main>
+            <nav class="navbar navbar-expand-lg sticky-top">
+                <div class="container align-items-left">
+                    <div class="navbar-brand-group d-flex align-items-center">
+                        <a class="brand-item" href="https://www.instagram.com/pbiarraniry">
+                            <img src="images/UIN Ar-Raniry.png" class="brand-logo img-fluid" alt="Logo UIN">
+                            <div class="brand-text">
+                                <span class="brand-title">Pendidikan</span>
+                                <span class="brand-title">Bahasa Inggris</span>
+                                <span class="brand-subtitle">UIN Ar-Raniry</span>
+                            </div>
+                        </a>
+                        <div class="brand-divider"></div>
+                        <a class="brand-item" href="index.html">
+                            <img src="images/EDSA.png" class="brand-logo img-fluid" alt="Logo EDSA">
+                            <div class="brand-text">
+                                <span class="brand-title">EDSA</span>
+                                <span class="brand-subtitle description">English Department Student<br>Association UIN Ar-Raniry</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <button class="navbar-toggler custom-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto align-items-center">
+                            <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about us.html">ABOUT US</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">OUR DIVISIONS</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="ECO.html">ECO</a></li>
+                                    <li><a class="dropdown-item" href="HRD.html">HRD</a></li>
+                                    <li><a class="dropdown-item" href="IT.html">IT</a></li>
+                                    <li><a class="dropdown-item" href="SC.html">SC</a></li>
+                                    <li><a class="dropdown-item" href="Presidential.html">Presidential</a></li>
+                                    <li><a class="dropdown-item" href="PRC.html">PRC</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">OUR PAST EVENTS</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="2025.html">2025</a></li>
+                                    <li><a class="dropdown-item" href="2024.html">2024</a></li>
+                                    <li><a class="dropdown-item" href="2023.html">2023</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">MORE</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="Former President.html">Former President</a></li>
+                                    <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                                    <li><a class="dropdown-item" href="our-gallery.html">Our Gallery</a></li>
+                                    <li><a class="dropdown-item active" href="downloads.html">Downloads</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <header class="site-header d-flex flex-column justify-content-center align-items-center pb-2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-12 text-center animate-on-scroll">
+                            <h2 class="mb-0"><strong>Archives & Downloads</strong></h2>
+                            <p class="text-white mt-2">Official Database & Organizational Archives</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="section-padding" style="padding-bottom: 100px;">
+                <div class="container">
+                    
+                    <div class="row mb-5 justify-content-center">
+                        <div class="col-12 animate-up">
+                            <div class="section-header">
+                                <h4 class="mb-0 fw-bold">Brand Identity</h4>
+                                <small class="text-muted">High Resolution Official Logos</small>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-5 col-md-6 mb-4 animate-up delay-1">
+                            <div class="download-card text-center">
+                                <span class="year-badge">PNG / HD</span>
+                                
+                                <div class="logo-wrapper">
+                                    <img src="images/EDSA.png" alt="EDSA Logo" class="logo-img">
+                                </div>
+                                
+                                <h5 class="fw-bold">EDSA Ar-Raniry Logo</h5>
+                                <p class="text-muted small mb-0">Official association logo without background.</p>
+                                <a href="images/EDSA.png" target="_blank" class="btn btn-download-custom">
+                                    Download File <i class="bi bi-cloud-arrow-down-fill"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5 col-md-6 mb-4 animate-up delay-2">
+                            <div class="download-card text-center">
+                                <span class="year-badge">PNG / HD</span>
+                                
+                                <div class="logo-wrapper">
+                                    <img src="images/UIN Ar-Raniry.png" alt="UIN Logo" class="logo-img">
+                                </div>
+                                
+                                <h5 class="fw-bold">UIN Ar-Raniry Logo</h5>
+                                <p class="text-muted small mb-0">High-resolution official university emblem.</p>
+                                <a href="images/UIN Ar-Raniry.png" target="_blank" class="btn btn-download-custom">
+                                    Download File <i class="bi bi-cloud-arrow-down-fill"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5 col-md-6 mb-4 animate-up delay-2">
+                            <div class="download-card text-center">
+                                <span class="year-badge">CDR</span>
+                                
+                                <div class="logo-wrapper" style="height: 120px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" width="80" height="80" fill="var(--primary-color)">
+                                        <path d="M211.8 0c7.8 0 14.3 5.7 16.7 13.2C240.8 51.9 277.1 80 320 80s79.2-28.1 91.5-66.8C413.9 5.7 420.4 0 428.2 0h12.6c22.5 0 44.2 7.9 61.5 22.3L628.5 127.4c6.6 5.5 10.7 13.5 11.4 22.1s-2.1 17.1-7.8 23.6l-56 64c-11.4 13.1-31.2 14.6-44.6 3.5L480 197.7V448c0 35.3-28.7 64-64 64H224c-35.3 0-64-28.7-64-64V197.7l-51.5 42.9c-13.3 11.1-33.1 9.6-44.6-3.5l-56-64c-5.7-6.5-8.5-15-7.8-23.6s4.8-16.6 11.4-22.1L137.7 22.3C155 7.9 176.7 0 199.2 0h12.6z"/>
+                                    </svg>
+                                </div>
+                                
+                                <h5 class="fw-bold">EDSA PDH Uniform</h5>
+                                <p class="text-muted small mb-0">Official daily uniform template</p>
+                                <a href="images/UIN Ar-Raniry.png" target="_blank" class="btn btn-download-custom">
+                                    Download File <i class="bi bi-cloud-arrow-down-fill"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 animate-up">
+                            <div class="section-header">
+                                <h4 class="mb-0 fw-bold">Legal Documents</h4>
+                                <small class="text-muted">Certificates per Events</small>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 mb-4 animate-up delay-1">
+                            <div class="download-card text-center">
+                                <span class="year-badge">2025</span>
+                                <div class="icon-wrapper">
+                                    <i class="bi bi-file-earmark-pdf-fill file-icon"></i>
+                                </div>
+                                <h5 class="fw-bold">International Seminar</h5>
+                                <p class="fw-bold small mb-2">Participant</p>
+                                <p class="text-muted small mb-0">EDSA Period 2025/2026</p>
+                                <a href="https://drive.google.com/drive/folders/1m-xVHLLPNFh--Ik30MdjHI0Z9nl8fpRx?usp=sharing" target="_blank" class="btn btn-download-custom">
+                                    View Certificates <i class="bi bi-eye-fill"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 mb-4 animate-up delay-1">
+                            <div class="download-card text-center">
+                                <span class="year-badge">2025</span>
+                                <div class="icon-wrapper">
+                                    <i class="bi bi-file-earmark-pdf-fill file-icon"></i>
+                                </div>
+                                <h5 class="fw-bold">Iftar Charity</h5>
+                                <p class="fw-bold small mb-2">Committee</p>
+                                <p class="text-muted small mb-2">EDSA Period 2025/2026</p>
+                                <p class="fw-bold small bi-exclamation-circle"> UIN Access only</p>
+                                <a href="https://drive.google.com/drive/folders/1m-xVHLLPNFh--Ik30MdjHI0Z9nl8fpRx?usp=sharing" target="_blank" class="btn btn-download-custom">
+                                    View Certificates <i class="bi bi-eye-fill"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 mb-4 animate-up delay-1">
+                            <div class="download-card text-center">
+                                <span class="year-badge">2025</span>
+                                <div class="icon-wrapper">
+                                    <i class="bi bi-file-earmark-pdf-fill file-icon"></i>
+                                </div>
+                                <h5 class="fw-bold">EDSA x MEBY</h5>
+                                <p class="fw-bold small mb-2">English Tutor</p>
+                                <p class="text-muted small mb-2">EDSA Period 2025/2026</p>
+                                <p class="fw-bold small bi-exclamation-circle"> UIN Access only</p>
+                                <a href="https://drive.google.com/drive/folders/1m6BF2D-atnpouTPwizfFXkcwt3NPi1bv?usp=sharing" target="_blank" class="btn btn-download-custom">
+                                    View Certificates <i class="bi bi-eye-fill"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 mb-4 animate-up delay-1">
+                            <div class="download-card text-center">
+                                <span class="year-badge">2025</span>
+                                <div class="icon-wrapper">
+                                    <i class="bi bi-file-earmark-pdf-fill file-icon"></i>
+                                </div>
+                                <h5 class="fw-bold">EDSA Lecturer Talk</h5>
+                                <p class="fw-bold small mb-2">Participant</p>
+                                <p class="text-muted small mb-2">EDSA Period 2025/2026</p>
+                                <a href="https://drive.google.com/drive/folders/1sbzX-eOwYhZXEQsD1lAjQXFVTGfac-Gt?usp=sharing" target="_blank" class="btn btn-download-custom">
+                                    View Certificates <i class="bi bi-eye-fill"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 mb-4 animate-up delay-1">
+                            <div class="download-card text-center">
+                                <span class="year-badge">2025</span>
+                                <div class="icon-wrapper">
+                                    <i class="bi bi-file-earmark-pdf-fill file-icon"></i>
+                                </div>
+                                <h5 class="fw-bold">EDSA Lecturer Talk</h5>
+                                <p class="fw-bold small mb-2">Committee</p>
+                                <p class="text-muted small mb-2">EDSA Period 2025/2026</p>
+                                <p class="fw-bold small bi-exclamation-circle"> UIN Access only</p>
+                                <a href="https://drive.google.com/drive/folders/1VtwH6mp0tUkyi4bn05ef7UMyoY_24kd9?usp=sharing" target="_blank" class="btn btn-download-custom">
+                                    View Certificates <i class="bi bi-eye-fill"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 mb-4 animate-up delay-1">
+                            <div class="download-card text-center">
+                                <span class="year-badge">2025</span>
+                                <div class="icon-wrapper">
+                                    <i class="bi bi-file-earmark-pdf-fill file-icon"></i>
+                                </div>
+                                <h5 class="fw-bold">EDSA Lecturer Talk</h5>
+                                <p class="fw-bold small mb-2">Committee</p>
+                                <p class="text-muted small mb-2">EDSA Period 2025/2026</p>
+                                <p class="fw-bold small bi-exclamation-circle"> UIN Access only</p>
+                                <a href="https://drive.google.com/drive/folders/1VtwH6mp0tUkyi4bn05ef7UMyoY_24kd9?usp=sharing" target="_blank" class="btn btn-download-custom">
+                                    View Certificates <i class="bi bi-eye-fill"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 mb-4 animate-up delay-1">
+                            <div class="download-card text-center">
+                                <span class="year-badge">2025</span>
+                                <div class="icon-wrapper">
+                                    <i class="bi bi-file-earmark-pdf-fill file-icon"></i>
+                                </div>
+                                <h5 class="fw-bold">EDSA Lecturer Talk</h5>
+                                <p class="fw-bold small mb-2">Committee</p>
+                                <p class="text-muted small mb-2">EDSA Period 2025/2026</p>
+                                <p class="fw-bold small bi-exclamation-circle"> UIN Access only</p>
+                                <a href="https://drive.google.com/drive/folders/1VtwH6mp0tUkyi4bn05ef7UMyoY_24kd9?usp=sharing" target="_blank" class="btn btn-download-custom">
+                                    View Certificates <i class="bi bi-eye-fill"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 mb-4 animate-up delay-1">
+                            <div class="download-card text-center">
+                                <span class="year-badge">2025</span>
+                                <div class="icon-wrapper">
+                                    <i class="bi bi-file-earmark-pdf-fill file-icon"></i>
+                                </div>
+                                <h5 class="fw-bold">EDSA Lecturer Talk</h5>
+                                <p class="fw-bold small mb-2">Committee</p>
+                                <p class="text-muted small mb-2">EDSA Period 2025/2026</p>
+                                <p class="fw-bold small bi-exclamation-circle"> UIN Access only</p>
+                                <a href="https://drive.google.com/drive/folders/1VtwH6mp0tUkyi4bn05ef7UMyoY_24kd9?usp=sharing" target="_blank" class="btn btn-download-custom">
+                                    View Certificates <i class="bi bi-eye-fill"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 mb-4 animate-up delay-1">
+                            <div class="download-card text-center">
+                                <span class="year-badge">2025</span>
+                                <div class="icon-wrapper">
+                                    <i class="bi bi-file-earmark-pdf-fill file-icon"></i>
+                                </div>
+                                <h5 class="fw-bold">EDSA Lecturer Talk</h5>
+                                <p class="fw-bold small mb-2">Committee</p>
+                                <p class="text-muted small mb-2">EDSA Period 2025/2026</p>
+                                <p class="fw-bold small bi-exclamation-circle"> UIN Access only</p>
+                                <a href="https://drive.google.com/drive/folders/1VtwH6mp0tUkyi4bn05ef7UMyoY_24kd9?usp=sharing" target="_blank" class="btn btn-download-custom">
+                                    View Certificates <i class="bi bi-eye-fill"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 mb-4 animate-up delay-1">
+                            <div class="download-card text-center">
+                                <span class="year-badge">2025</span>
+                                <div class="icon-wrapper">
+                                    <i class="bi bi-file-earmark-pdf-fill file-icon"></i>
+                                </div>
+                                <h5 class="fw-bold">EDSA Lecturer Talk</h5>
+                                <p class="fw-bold small mb-2">Committee</p>
+                                <p class="text-muted small mb-2">EDSA Period 2025/2026</p>
+                                <p class="fw-bold small bi-exclamation-circle"> UIN Access only</p>
+                                <a href="https://drive.google.com/drive/folders/1VtwH6mp0tUkyi4bn05ef7UMyoY_24kd9?usp=sharing" target="_blank" class="btn btn-download-custom">
+                                    View Certificates <i class="bi bi-eye-fill"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 mb-4 animate-up delay-1">
+                            <div class="download-card text-center">
+                                <span class="year-badge">2025</span>
+                                <div class="icon-wrapper">
+                                    <i class="bi bi-file-earmark-pdf-fill file-icon"></i>
+                                </div>
+                                <h5 class="fw-bold">EDSA Lecturer Talk</h5>
+                                <p class="fw-bold small mb-2">Committee</p>
+                                <p class="text-muted small mb-2">EDSA Period 2025/2026</p>
+                                <p class="fw-bold small bi-exclamation-circle"> UIN Access only</p>
+                                <a href="https://drive.google.com/drive/folders/1VtwH6mp0tUkyi4bn05ef7UMyoY_24kd9?usp=sharing" target="_blank" class="btn btn-download-custom">
+                                    View Certificates <i class="bi bi-eye-fill"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 mb-4 animate-up delay-1">
+                            <div class="download-card text-center">
+                                <span class="year-badge">2025</span>
+                                <div class="icon-wrapper">
+                                    <i class="bi bi-file-earmark-pdf-fill file-icon"></i>
+                                </div>
+                                <h5 class="fw-bold">EDSA Lecturer Talk</h5>
+                                <p class="fw-bold small mb-2">Committee</p>
+                                <p class="text-muted small mb-2">EDSA Period 2025/2026</p>
+                                <p class="fw-bold small bi-exclamation-circle"> UIN Access only</p>
+                                <a href="https://drive.google.com/drive/folders/1VtwH6mp0tUkyi4bn05ef7UMyoY_24kd9?usp=sharing" target="_blank" class="btn btn-download-custom">
+                                    View Certificates <i class="bi bi-eye-fill"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    
+                    </div>
+
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row align-items-start">
+                    <div class="col-lg-3 col-12 mb-4 mb-lg-0">
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex me-2">
+                                <img src="images/UIN Ar-Raniry.png" class="logo-image img-fluid" alt="logo" style="width: 50px;">
+                                <img src="images/EDSA.png" class="logo-image img-fluid" alt="logo" style="width: 53px; margin-left: 5px;">
+                            </div>
+                            <div class="text-white">
+                                <h3 class="mb-0 text-white" style="font-weight: 800; font-size: 26px;">EDSA</h3>
+                                <p class="mb-0 text-white" style="font-size: 11px;">UIN AR-RANIRY</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                        <h6 class="site-footer-title mb-3">Contact us</h6>
+                        <p>
+                            <strong class="d-inline me-2">Phone:</strong>
+                            <a href="http://wa.me/6283825450534" target="_blank">+62838 - 2545 - 0543</a> 
+                        </p>
+                        <p>
+                            <strong class="d-inline me-2">Email:</strong>
+                            <a href="mailto:edsa@ar-raniry.ac.id" target="_blank">edsa@ar-raniry.ac.id</a> 
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                        <h6 class="site-footer-title mb-3">Social</h6>
+                        <ul class="social-icon d-flex flex-wrap"> 
+                            <li class="social-icon-item"><a href="https://www.instagram.com/edsa_arraniry/" target="_blank" class="social-icon-link bi-instagram"></a></li>
+                            <li class="social-icon-item"><a href="https://x.com/edsauinar" target="_blank" class="social-icon-link bi-twitter"></a></li>
+                            <li class="social-icon-item"><a href="http://wa.me/6283825450534?text=Hello%2C%20I%20have%20a%20question..." target="_blank" class="social-icon-link bi-whatsapp"></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-12 text-center text-lg-end">
+                        <p class="copyright-text mb-0">Copyright © 2025<br>EDSA Ar-Raniry</p>
+                        <p class="copyright-text mb-0" style="font-size: 12px;">Designed by: Feri Ramadhan</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/custom.js"></script>
+        <script>
+             document.addEventListener("DOMContentLoaded", function () {
+                const animatedElements = document.querySelectorAll('.animate-up');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.animationPlayState = 'running';
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                });
+                animatedElements.forEach(el => observer.observe(el));
+            });
+        </script>
+    </body>
+</html>
