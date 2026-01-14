@@ -145,3 +145,39 @@ document.addEventListener("DOMContentLoaded", function () {
     }, { threshold: 0.1 });
     animatedElements.forEach(el => observer.observe(el));
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll('.counter-number');
+    const speed = 200; // Kecepatan animasi
+
+    const animateCounters = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = +counter.getAttribute('data-target');
+                
+                const updateCount = () => {
+                    const count = +counter.innerText;
+                    const inc = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 20);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+                observer.unobserve(counter);
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(animateCounters, {
+        threshold: 0.5
+    });
+
+    counters.forEach(counter => {
+        observer.observe(counter);
+    });
+});
