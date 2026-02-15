@@ -32,9 +32,6 @@ Website ini dibangun dengan fokus pada desain modern, responsif, dan interaktif:
     * `Bootstrap Icons` (untuk ikon UI).
 * **Fonts:** Google Fonts (Montserrat & Sono).
 
-## Template Base
-https://templatemo.com/tm-584-pod-talk
-
 ## Struktur Folder
 
 ```text
