@@ -729,12 +729,23 @@ main {
   CAROUSEL        
 -----------------------------------------*/
 .hero-section {
-  background-image: url('../images/templatemo-wave-banner.jpg'), linear-gradient(red, #FFFFFF);
+  position: relative;
+  min-height: 100vh; /* Gunakan 100vh agar memenuhi layar penuh di semua device */
+  width: 100%;
+  display: flex;
+  align-items: center; /* Menjaga konten tetap di tengah secara vertikal */
+  justify-content: center;
+  background-image: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), 
+    url('../images/hero.jpeg');
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: 108% 76%;
-  background-position: top;
-  padding-top: 200px;
+  padding: 0; /* Hapus padding default yang bikin berantakan */
+  margin: 0;
 }
+
+/* Khusus Mobile */
 
 
 .owl-carousel {
@@ -782,7 +793,6 @@ main {
   bottom: 0;
   right: 0;
   left: 0;
-  /* Atas 15px, Kanan 30px, Bawah 30px, Kiri 30px */
   padding: 15px 30px 30px 30px; 
 }
 
@@ -1542,10 +1552,51 @@ main {
 /*---------------------------------------
   RESPONSIVE STYLES               
 -----------------------------------------*/
+/* =========================================
+   PERBAIKAN HERO SECTION KHUSUS MOBILE (V3 - FINAL FIT)
+   ========================================= */
+@media screen and (max-width: 768px) {
+    
+    .hero-section {
+        /* 1. Jarak Atas (Biar teks ga nempel banget sama navbar/langit) */
+        padding-top: 110px !important;  
+        
+        /* 2. Tinggi Pas (Kurangi dari 450px ke 380px atau 400px) */
+        /* Ini kuncinya biar gap kosong di tengah berkurang */
+        min-height: 390px !important;     
+        
+        /* Padding bawah secukupnya */
+        padding-bottom: 0px !important; 
+        
+        /* Tetap pakai cover biar ga gepeng */
+        background-size: cover !important; 
+        background-position: center center !important;
+    }
+
+    /* Ukuran font judul di HP */
+    .hero-section h1 {
+        font-size: 26px !important; /* Kecilin dikit lagi biar proporsional */
+        margin-bottom: 5px;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+
+    .hero-section p {
+        font-size: 13px !important;
+        margin-bottom: 0px; /* Hapus margin bawah p biar makin rapet sama box */
+    }
+
+    /* Posisi Kotak Statistik */
+    .latest-podcast-section {
+        /* Naikkan kotak statistik lebih tinggi untuk menutup gap */
+        margin-top: -80px !important; 
+        position: relative;
+        z-index: 10; /* Pastikan dia di atas background */
+    }
+}
+
 @media screen and (min-width: 2160px) {
 	.hero-section {
 	  background-size: 100% 90%;
-	  /* T o o p l a t e . c o m   C u s t o m i z e d */
 	}
 }
 
