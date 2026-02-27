@@ -1548,50 +1548,30 @@ main {
   color: var(--white-color);
 }
 
+@media screen and (max-width: 768px) { 
+  .hero-section {
+      padding-top: 110px !important;  
+      min-height: 390px !important;     
+      padding-bottom: 0px !important; 
+      background-size: cover !important; 
+      background-position: center center !important;
+  }
+  .hero-section h1 {
+      font-size: 26px !important;
+      margin-bottom: 5px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  }
 
-/*---------------------------------------
-  RESPONSIVE STYLES               
------------------------------------------*/
-/* =========================================
-   PERBAIKAN HERO SECTION KHUSUS MOBILE (V3 - FINAL FIT)
-   ========================================= */
-@media screen and (max-width: 768px) {
-    
-    .hero-section {
-        /* 1. Jarak Atas (Biar teks ga nempel banget sama navbar/langit) */
-        padding-top: 110px !important;  
-        
-        /* 2. Tinggi Pas (Kurangi dari 450px ke 380px atau 400px) */
-        /* Ini kuncinya biar gap kosong di tengah berkurang */
-        min-height: 390px !important;     
-        
-        /* Padding bawah secukupnya */
-        padding-bottom: 0px !important; 
-        
-        /* Tetap pakai cover biar ga gepeng */
-        background-size: cover !important; 
-        background-position: center center !important;
-    }
+  .hero-section p {
+      font-size: 13px !important;
+      margin-bottom: 0px;
+  }
 
-    /* Ukuran font judul di HP */
-    .hero-section h1 {
-        font-size: 26px !important; /* Kecilin dikit lagi biar proporsional */
-        margin-bottom: 5px;
-        text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-    }
-
-    .hero-section p {
-        font-size: 13px !important;
-        margin-bottom: 0px; /* Hapus margin bawah p biar makin rapet sama box */
-    }
-
-    /* Posisi Kotak Statistik */
-    .latest-podcast-section {
-        /* Naikkan kotak statistik lebih tinggi untuk menutup gap */
-        margin-top: -80px !important; 
-        position: relative;
-        z-index: 10; /* Pastikan dia di atas background */
-    }
+  .latest-podcast-section {
+      margin-top: -80px !important; 
+      position: relative;
+      z-index: 10;
+  }
 }
 
 @media screen and (min-width: 2160px) {
@@ -1662,24 +1642,20 @@ main {
   .navbar-nav .dropdown-menu {
   position: relative;
   left: 10px;
-  
-  /* UBAH BAGIAN INI: Sembunyikan secara default */
   display: none; 
   opacity: 0;
-  pointer-events: none;
-  
+  pointer-events: none; 
   max-width: 155px;
   margin-top: 10px;
   margin-bottom: 15px;
-  transition: all 0.3s ease; /* Tambahkan animasi halus jika mau */
+  transition: all 0.3s ease;
 }
 
-/* TAMBAHKAN BAGIAN INI: Agar muncul saat diklik (Bootstrap menambahkan class .show) */
-.navbar-nav .dropdown-menu.show {
-  display: block;
-  opacity: 1;
-  pointer-events: auto;
-}
+  .navbar-nav .dropdown-menu.show {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+  }
 
   .navbar-expand-lg .navbar-nav {
     padding-bottom: 20px;
@@ -2145,3 +2121,173 @@ main {
 .gallery-item:hover img { transform: scale(1.05); }
 .gallery-item:hover .gallery-overlay { opacity: 1; }
 .gallery-item:hover .gallery-overlay i { transform: scale(1); }
+
+/* ==========================================
+   POP UP IMSAKIYAH STYLE
+   ========================================== */
+.imsakiyah-overlay {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 99999; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    transition: all 0.4s ease-in-out;
+}
+
+.imsakiyah-overlay.show-popup {
+    visibility: visible;
+    opacity: 1;
+}
+
+.imsakiyah-content {
+    background: var(--white-color);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    transform: scale(0.8) translateY(20px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--primary-color);
+}
+
+.imsakiyah-overlay.show-popup .imsakiyah-content {
+    transform: scale(1) translateY(0);
+}
+
+.imsakiyah-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s;
+    line-height: 1;
+}
+
+.imsakiyah-close:hover {
+    color: var(--primary-color);
+}
+
+.imsakiyah-logo {
+    width: 70px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+}
+
+.imsakiyah-content h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+.imsakiyah-content p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.imsakiyah-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 50px;
+    font-size: 15px;
+}
+
+/* ==========================================
+   RAMADHAN BANNER STYLE
+   ========================================== */
+.ramadhan-banner {
+    background: linear-gradient(135deg, var(--primary-color), #ff7e75);
+    border-radius: 20px;
+    padding: 30px 40px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ramadhan-banner:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(243, 67, 54, 0.3) !important;
+}
+
+/* Ornamen bulan sabit samar di background kanan */
+.ramadhan-banner::before {
+    content: '\f495'; /* Kode unicode untuk icon bi-moon-stars-fill */
+    font-family: bootstrap-icons !important;
+    position: absolute;
+    right: -20px;
+    top: -40px;
+    font-size: 180px;
+    color: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.ramadhan-banner .row {
+    position: relative;
+    z-index: 2;
+}
+
+.ramadhan-title {
+    color: var(--white-color) !important;
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+}
+
+.ramadhan-text {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.ramadhan-btn {
+    background: var(--white-color);
+    color: var(--primary-color);
+    border-radius: 50px;
+    padding: 12px 28px;
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: none;
+}
+
+.ramadhan-btn:hover {
+    background: var(--dark-color);
+    color: var(--white-color);
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .ramadhan-banner {
+        padding: 25px 20px;
+    }
+    .ramadhan-title {
+        font-size: 22px;
+    }
+    .ramadhan-text {
+        font-size: 14px;
+    }
+}

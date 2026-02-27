@@ -181,3 +181,24 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(counter);
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const popup = document.getElementById("imsakiyahPopup");
+    const closeBtn = document.getElementById("closeImsakiyahBtn");
+
+    if (popup && closeBtn) {
+        setTimeout(() => {
+            popup.classList.add("show-popup");
+        }, 2000);
+
+        closeBtn.addEventListener("click", () => {
+            popup.classList.remove("show-popup");
+        });
+
+        window.addEventListener("click", (event) => {
+            if (event.target === popup) {
+                popup.classList.remove("show-popup");
+            }
+        });
+    }
+});
