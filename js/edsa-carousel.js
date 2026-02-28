@@ -35,8 +35,113 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         ],
         "2020": [
-            
-        ]
+            {
+                title: 'Menjawab Kebosanan Mahasiswa melalui Aksi Gardening di Masa NewNormal',
+                image: 'https://sumberpost.com/wp-content/uploads/2020/07/IMG_20200718_084839-2048x1536.jpg',
+                tech: ['July 18', 'Sumber Post'],
+                link: 'https://sumberpost.com/2020/07/18/menjawab-kebosanan-mahasiswa-melalui-aksi-gardening-di-masa-newnormal/'
+            },
+            {
+                title: 'Online Seminar PBI UIN Ar-Raniry Series III',
+                image: 'http://padebooks.com/wp-content/uploads/2020/09/PBI-Webinar-215x300.jpeg',
+                tech: ['September 15', 'Redaksi'],
+                link: 'https://padebooks.com/2020/09/15/online-seminar-pbi-uin-ar-raniry-series-3/'
+            },
+            {
+                title: 'Mahasiswa IAIN Bengkulu Raih Penghargaan di Banda Aceh',
+                image: 'https://tuntasonline.id/sites/default/files/articles/IMG-20200213-WA0007.jpg',
+                tech: ['February 13', 'Tuntas Online'],
+                link: 'https://tuntasonline.id/2020/02/13/mahasiswa-iain-bengkulu-raih-penghargaan-di-banda-aceh/'
+            },
+            {
+                title: 'Prodi PBI bersama EDSA Salurkan Donasi untuk Tenaga Medis',
+                image: 'https://sumberpost.com/wp-content/uploads/2020/04/IMG-20200422-WA0034.jpg',
+                tech: ['April 22', 'Sumber Post'],
+                link: 'https://sumberpost.com/2020/04/22/prodi-pbi-bersama-edsa-salurkan-donasi-untuk-tenaga-medis/'
+            },
+            {
+                title: 'PBI UINAR Adakan Webinar Internasional',
+                image: 'http://padebooks.com/wp-content/uploads/2020/07/JPG-PBI-214x300.jpeg',
+                tech: ['July 13', 'Redaksi'],
+                link: 'https://padebooks.com/2020/07/18/pbi-uinar-adakan-webinar-internasional/'
+            },
+            {
+                title: 'EDSA Kolaborasi dengan Kophi Aceh dan Zero Waste Bersihkan Pantai Ulee Lheue',
+                image: 'https://sumberpost.com/wp-content/uploads/2020/06/IMG_20200627_092430-2048x1536.jpg',
+                tech: ['June 28', 'Sumber Post'],
+                link: 'https://sumberpost.com/2020/06/28/edsa-kolaborasi-dengan-kophi-aceh-dan-zero-waste-bersihkan-pantai-ulee-lheue/"'
+            },
+            {
+                title: 'Prodi PBI UIN Ar Raniry dan EDSA Kembali Salurkan Sembako Untuk Masyarakat Terdampak Covid-19',
+                image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxe1hyphenhyphenqMQ4C6XErEkStFPtXYJMm08Rb92EO0gIFFfIVt3hKsVyIKPaZkJ1aMVGxwYzZaohi_FvzLR3QMWowMDP-a4B4XRrgzlJhBLwPJYdPXik5ArQpC3k_0OgrT646nOpUQgfotZ4AqYF/s1600/IMG-20200516-WA0018.jpg',
+                tech: ['May 16', 'Wasatha'],
+                link: 'https://www.wasatha.com/2020/05/prodi-pbi-uin-ar-raniry-dan-edsa.html'
+            },
+        ],
+        "2021": [
+            {
+                title: 'PBI dan EDSA Lantik Kepengurusan Baru Periode 2021/2022',
+                image: 'https://sumberpost.com/wp-content/uploads/2021/06/IMG-20210607-WA0010.jpg',
+                tech: ['June 7', 'Sumber Post'],
+                link: 'https://sumberpost.com/2021/06/07/pbi-dan-edsa-lantik-kepengurusan-baru-periode-2021-2022/'
+            },
+            {
+                title: 'EDSA League Kembali Digelar Bulan Ini',
+                image: 'https://sumberpost.com/wp-content/uploads/2021/02/DSCF5495.jpg',
+                tech: ['February 8', 'Sumber Post'],
+                link: 'https://sumberpost.com/2021/11/08/edsa-league-kembali-digelar-bulan-ini/'
+            },
+            {
+                title: 'Prodi PBI Bersama EDSA Inisiasi Agenda Training Tajhiz Mayit',   
+                image: 'https://dialeksis.com/images/web/2021/01/e4464615-4c63-4edd-bced-8a1e9797faa7.jfif',
+                tech: ['January 14', 'Dialeksis'],
+                link: 'https://sumberpost.com/2021/01/14/prodi-pbi-bersama-edsa-inisiasi-agenda-training-tajhiz-mayit/'
+            },
+            {
+                title: 'EDSA Goes to Mahad, Program Baru PBI UIN Ar-Raniry dan EDSA',
+                image: 'https://sumberpost.com/wp-content/uploads/2021/01/WhatsApp-Image-2021-01-23-at-21.04.49.jpeg',
+                tech: ['January 23', 'Sumber Post'],
+                link: 'https://sumberpost.com/2021/01/23/edsa-goes-to-mahad-program-baru-pbi-uin-ar-raniry-dan-edsa/'
+            },
+            {
+                title: 'Program Studi Bahasa Inggris UIN Ar-Raniry Gelar BSC 2021 untuk Mahasiswa Baru',
+                image: 'https://i0.wp.com/masakini.co/wp-content/uploads/2022/02/IMG-20220212-WA0020.jpg?resize=750%2C536&ssl=1',
+                tech: ['February 12', 'Masa Kini'],
+                link: 'https://masakini.co/2022/02/12/program-studi-bahasa-inggris-uin-ar-raniry-gelar-bsc-2022-untuk-mahasiswa-baru/'
+            },
+            {
+                title: 'Prodi Pendidikan Bahasa Inggris UIN Ar-Raniry Gelar BSC 2021',
+                image: 'https://sumberpost.com/wp-content/uploads/2022/02/20220211144045_IMG_2162.jpg',
+                tech: ['February 12', 'Sumber Post'],
+                link: 'https://sumberpost.com/2022/02/11/prodi-pendidikan-bahasa-inggris-uin-ar-raniry-gelar-bsc-2022/'
+            }
+        ],
+        "2022": [
+            {
+                title: 'Prodi Bahasa Inggris Bersama EDSA Adakan EGS 2022',
+                image: 'https://sumberpost.com/wp-content/uploads/2022/03/IMG-20220311-WA0006.jpg',
+                tech: ['March 11', 'Sumber Post'],
+                link: 'https://sumberpost.com/2022/03/11/prodi-bahasa-inggris-bersama-edsa-adakan-egs/'
+            },
+            {
+                title: 'EDSA Kembali Gelar EDSA League 2022',
+                image: 'https://sumberpost.com/wp-content/uploads/2022/03/IMG-20220327-WA0076.jpg',
+                tech: ['March 27', 'Sumber Post'],
+                link: 'https://sumberpost.com/2022/03/27/edsa-kembali-gelar-edsa-league-2022/'
+            },
+            {
+                title: 'Pergantian dan Pelantikan Pengurus Baru EDSA Periode 2022-2023',
+                image: 'https://sumberpost.com/wp-content/uploads/2022/07/IMG-20220721-WA0035.jpg',
+                tech: ['July 21', 'Sumber Post'],
+                link: 'https://sumberpost.com/2022/07/21/pergantian-dan-pelantikan-pengurus-baru-edsa-periode-2022-2023/'
+            },
+            {
+                title: 'Fathun Mubin Agusni, Presiden EDSA Periode 2022-2023',
+                image: 'https://sumberpost.com/wp-content/uploads/2022/03/IMG-20220311-WA0006.jpg',
+                tech: ['June 06', 'Sumber Post'],
+                link: 'https://sumberpost.com/2022/06/06/fathun-mubin-agusni-presiden-edsa-periode-2022-2023/' 
+            }
+        ],
     };
 
     const currentYear = carouselElement.getAttribute('data-year');
@@ -49,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let currentIndex = 0;
 
-    function createCarouselItem(data, index) {
+    function createCarouselItem(data, _index) {
         const item = document.createElement('div');
         item.className = 'edsa-3d-item';
         
@@ -64,8 +169,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     <h3 class="card-title">${data.title}</h3>
                     <div class="card-tech">${techBadges}</div>
                 </div>
-                <div class="mt-auto pt-3">
-                    <a href="${data.link}" target="_blank" class="card-cta" style="position: relative !important; bottom: auto !important; width: 100% !important;">Baca Selengkapnya</a>
+                <div class="mt-auto pt-auto">
+                    <a href="${data.link}" target="_blank" class="card-cta" style="position: relative !important; bottom: auto !important; width: 100% !important;">Learn More</a>
                 </div>
             </div>
         `;
