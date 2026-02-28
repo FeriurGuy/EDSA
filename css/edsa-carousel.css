@@ -1,0 +1,200 @@
+/* ==========================================
+   EDSA 3D CAROUSEL STYLES (Fixed Bootstrap Conflict)
+   ========================================== */
+.carousel-hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 60px 20px 150px;
+    background: radial-gradient(ellipse at center, rgba(243, 67, 54, 0.05) 0%, transparent 50%);
+    overflow: hidden;
+}
+
+.carousel-container {
+    width: 100%;
+    max-width: 1200px;
+    height: 550px;
+    perspective: 1200px;
+    position: relative;
+}
+
+/* Ganti .carousel jadi nama lain biar aman dari bentrok */
+.edsa-carousel-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+/* INI YANG BIKIN ILANG TADI: Namanya kita ganti jadi .edsa-3d-item */
+.edsa-3d-item {
+    position: absolute;
+    width: 350px;
+    height: 480px;
+    left: 50%;
+    top: 50%;
+    transform-style: preserve-3d;
+    transition: all 0.8s cubic-bezier(0.4, 0.0, 0.2, 1);
+    transform-origin: center center;
+    opacity: 0; 
+    transform: translate(-50%, -50%) translateZ(-500px) scale(0.5);
+    display: block !important; /* Paksa tampil buat ngelawan Bootstrap kalau bandel */
+}
+
+.edsa-3d-item .card {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    border: 2px solid #f34336;
+    border-radius: 20px;
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    /* Tambahan baru: Bikin jadi flexbox biar dinamis */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.edsa-3d-item:hover .card-image img {
+    transform: scale(1.1);
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    color: #000000;
+}
+
+.card-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tech-badge {
+    padding: 5px 12px;
+    background: rgba(243, 67, 54, 0.1);
+    border: 1px solid #f34336;
+    border-radius: 20px;
+    font-size: 11px;
+    color: #f34336;
+    font-weight: 600;
+}
+
+.card-cta {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px 0px;
+    background: #f34336;
+    border-radius: 30px;
+    color: #ffffff !important;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    /* Tambahan baru: Dorong otomatis ke bawah, hapus position absolute */
+    margin-top: auto; 
+}
+
+.card-cta:hover {
+    background: #000000;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-controls {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    z-index: 100;
+}
+
+.carousel-btn {
+    width: 50px;
+    height: 50px;
+    background: #ffffff;
+    border: 2px solid #f34336;
+    border-radius: 50%;
+    color: #f34336;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.carousel-btn:hover {
+    background: #f34336;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .edsa-3d-item { width: 280px; height: 420px; }
+    .card-image { height: 160px; }
+    .carousel-container { height: 480px; }
+    .card-title { font-size: 16px; }
+}
+
+/* ==========================================
+   FLOATING DOTS BACKGROUND
+   ========================================== */
+.edsa-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none; /* Biar nggak ganggu klik carousel */
+    z-index: 0;
+}
+
+.particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: rgba(243, 67, 54, 0.4); /* Merah EDSA transparan */
+    border-radius: 50%;
+    opacity: 0;
+    animation: float-particle 20s infinite linear;
+}
+
+@keyframes float-particle {
+    0% { transform: translateY(0); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+/* Biar carousel tetap di atas particles */
+.carousel-container {
+    z-index: 2; 
+}
