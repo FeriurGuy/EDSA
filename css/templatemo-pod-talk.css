@@ -1455,7 +1455,7 @@ main {
   SITE FOOTER              
 -----------------------------------------*/
 .site-footer {
-  background-image: url('../images/templatemo-wave-footer.jpg'), linear-gradient(#FFFFFF, #348CD2);
+  background-image: url('../images/templatemo-wave-footer.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

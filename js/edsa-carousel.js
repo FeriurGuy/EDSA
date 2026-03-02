@@ -142,6 +142,74 @@ document.addEventListener("DOMContentLoaded", function() {
                 link: 'https://sumberpost.com/2022/06/06/fathun-mubin-agusni-presiden-edsa-periode-2022-2023/' 
             }
         ],
+        "2023": [
+            {
+                title: 'PBI Dan EDSA Gelar Alumnitalk, Bahas Peluang Bekerja dan Belajar di Qatar',
+                image: 'https://dialeksis.com/images/web/2023/06/PBI-EDSA-Alumnitalk.jpg',
+                tech: ['June 14', 'Dialeksis'],
+                link: 'https://dialeksis.com/2023/06/pbi-edsa-gelar-alumnitalk-bahas-peluang-bekerja-dan-belajar-di-qatar/'
+            },
+            {
+                title: 'Akan Sambut Fair ke-4, EDSA Gelar Konferensi Pendidikan Internasional',
+                image: 'https://sumberpost.com/wp-content/uploads/2023/10/WhatsApp-Image-2023-10-12-at-22.16.41-1536x1024.jpeg',
+                tech: ['October 12', 'Sumber Post'],
+                link: 'https://sumberpost.com/2023/10/12/akan-sambut-fair-ke-4-edsa-gelar-konferensi-pendidikan-internasional/'
+            },
+            {
+                title: 'PBI Gelar Alumnitalk',
+                image: 'https://sumberpost.com/wp-content/uploads/2023/06/WhatsApp-Image-2023-06-14-at-18.22.44.jpeg',
+                tech: ['June 14', 'Sumber Post'],
+                link: 'https://sumberpost.com/2023/06/14/pbi-gelar-alumnitalk/'
+            },
+            {
+                title: 'Prodi PBI Kembali Adakan BSC Tahun 2023',
+                image: 'https://sumberpost.com/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-24-at-20.38.16-1536x1152.jpeg',
+                tech: ['September 24', 'Sumber Post'],
+                link: 'https://sumberpost.com/2023/09/prodi-pbi-kembali-adakan-bsc-tahun-2023/'
+            },
+            {
+                title: 'Persiapkan Mahasiswa Ke Luar Negeri, PBI dan EDSA Gelar Seminar International',
+                image: 'https://sumberpost.com/wp-content/uploads/2023/03/WhatsApp-Image-2023-03-27-at-12.40.01-1536x864.jpeg',
+                tech: ['March 27', 'Sumber Post'],
+                link: 'https://sumberpost.com/2023/03/persiapkan-mahasiswa-ke-luar-negeri-pbi-dan-edsa-gelar-seminar-international-studi-generale/'
+            },
+            {
+                title: 'Sempat Vakum 4 Tahun, EDSA Kembali Gelar Fair Ke-4',
+                image: 'https://sumberpost.com/wp-content/uploads/2023/11/IMG_8769-1536x1024.jpg',
+                tech: ['November 02', 'Sumber Post'],
+                link: 'https://sumberpost.com/2023/11/02/vakum-4-tahun-edsa-kembali-gelar-fair-ke-4/'
+            },
+            {
+                title: 'Humam Asrawi, Presiden EDSA Periode 2023-2024',
+                image: 'https://sumberpost.com/wp-content/uploads/2023/02/IMG_1750-1536x1023.jpg',
+                tech: ['February 09', 'Sumber Post'],
+                link: 'https://sumberpost.com/2023/02/humam-asrawi-presiden-edsa-periode-2023-2024/'
+            },
+            {
+                title: 'Hindari Culture Shock, EDSA Adakan “Around The World Podcast”',
+                image: 'https://sumberpost.com/wp-content/uploads/2023/05/IMG_8445-1536x864.jpg',
+                tech: ['May 19', 'Sumber Post'],
+                link: 'https://sumberpost.com/2023/05/hindari-culture-shock-edsa-adakan-around-the-world-podcast/'
+            },
+            {
+                title: 'M. Qaid Al-Aufa Terpilih sebagai Presiden EDSA 2024/2025',
+                image: 'https://sumberpost.com/wp-content/uploads/2023/12/IMG_4115-1536x1152.jpg',
+                tech: ['Desember 12', 'Sumber Post'],
+                link: 'https://sumberpost.com/2023/12/m-qaid-al-aufa-terpilih-sebagai-presiden-edsa-2024-2025/'
+            },
+            {
+                title: 'Meriahkan Fair ke-4, EDSA Adakan Seminar Beasiswa Studi Mancanegara',
+                image: 'https://sumberpost.com/wp-content/uploads/2023/10/IMG-20231016-WA0002.jpg',
+                tech: ['October 16', 'Sumber Post'],
+                link: 'https://sumberpost.com/2023/10/meriahkan-fair-ke-4-edsa-adakan-seminar-beasiswa-studi-mancanegara/'
+            },
+            {
+                title: 'EDSA FTK UIN Ar-Raniry Adakan Mega Iftar dan Santuni Anak Yatim',
+                image: 'https://kabardaily.com/wp-content/uploads/2023/04/FB_IMG_1680450070013-768x512.jpg',
+                tech: ['April 02', 'Kabar Daily'],
+                link: 'https://kabardaily.com/2023/06/edsa-ftk-uin-ar-raniry-adakan-mega-iftar-dan-santuni-anak-yatim/'
+            },
+        ],
     };
 
     const currentYear = carouselElement.getAttribute('data-year');
