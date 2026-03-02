@@ -210,6 +210,68 @@ document.addEventListener("DOMContentLoaded", function() {
                 link: 'https://kabardaily.com/2023/06/edsa-ftk-uin-ar-raniry-adakan-mega-iftar-dan-santuni-anak-yatim/'
             },
         ],
+        "2024": [
+            {
+                title: 'Penutupan Gemilang EDSA Fair 2024: Merayakan Keberhasilan dan Kecemerlangan',
+                image: 'https://sumberpost.com/wp-content/uploads/2024/11/WhatsApp-Image-2024-11-11-at-07.17.18.jpeg',
+                tech: ['June 01', 'Sumber Post'],
+                link: 'https://sumberpost.com/2024/11/11/penutupan-gemilang-edsa-fair-2024-merayakan-keberhasilan-dan-kecemerlangan/'
+            },
+            {
+                title: 'Mosa Menyala di EDSA FAIR Competition UIN Ar-Raniry',
+                image: 'https://www.sman-modalbangsa.sch.id/wp-content/uploads/2024/11/IMG_20241111_182124.jpg',
+                tech: ['November 11', 'SMAN MoSa'],
+                link: 'https://www.sman-modalbangsa.sch.id/mosa-menyala-di-edsa-fair-competition-uin-ar-raniry/'
+            },
+            {
+                title: 'Mega Iftar Prodi Pendidikan Bahasa Inggris UIN Ar-Raniry 2024 Berlangsung Meriah',
+                image: 'https://asset.tribunnews.com/BRwlewyJKVlSka5FTkyPs4ius9o=/1200x675/filters:upscale():quality(30):format(webp):focal(0.5x0.5:0.5x0.5)/aceh/foto/bank/originals/Mega-Iftar.jpg',
+                tech: ['March 29', 'Amirullah'],
+                link: 'https://aceh.tribunnews.com/2024/03/29/mega-iftar-prodi-pendidikan-bahasa-inggris-uin-ar-raniry-2024-berlangsung-meriah'
+            },
+            {
+                title: 'Peringati Hari Lahir Pancasila, EDSA Adakan Humanity Action',
+                image: 'https://sumberpost.com/wp-content/uploads/2024/06/WhatsApp-Image-2024-06-01-at-20.58.34-1405x1536.jpeg',
+                tech: ['June 01', 'Sumber Post'],
+                link: 'https://sumberpost.com/2024/06/01/peringati-hari-lahir-pancasila-edsa-adakan-humanity-action/'
+            },
+            {
+                title: 'Pre-Event Meriah, Seminar Internasional Warnai Persiapan EDSA Fair ke-5',
+                image: 'https://sumberpost.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-17-at-20.13.52-1536x1152.jpeg',
+                tech: ['October 17', 'Sumber Post'],
+                link: 'https://sumberpost.com/2024/10/17/pre-event-meriah-seminar-internasional-warnai-persiapan-edsa-fair-ke-5/'
+            },
+            {
+                title: 'EDSA Sukses Gelar Pelantikan',
+                image: 'https://sumberpost.com/wp-content/uploads/2024/02/IMG-20240227-WA0011.jpg',
+                tech: ['February 27', 'Sumber Post'],
+                link: 'https://sumberpost.com/2024/02/27/edsa-sukses-gelar-pelantikan/'
+            },
+            {
+                title: 'EDSA Gelar Seminar Internasional dalam Rangka EDSA Fair ke-5',
+                image: 'https://sumberpost.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-17-at-20.13.52-1536x1152.jpeg',
+                tech: ['October 18', 'PBI Admin'],
+                link: 'https://ftk.ar-raniry.ac.id/2024/10/edsa-gelar-seminar-internasional-dalam-rangka-edsa-fair-ke-5/'
+            },
+            {
+                title: 'Adakan Mega Iftar, EDSA Berikan Santunan Anak Yatim dan Fakir Miskin',
+                image: 'https://sumberpost.com/wp-content/uploads/2024/03/WhatsApp-Image-2024-03-28-at-09.50.50-1536x1152.jpeg',
+                tech: ['March 27', 'Sumber Post'],
+                link: 'https://sumberpost.com/2024/03/27/adakan-mega-iftar-edsa-berikan-santunan-anak-yatim-dan-fakir-miskin/'
+            },
+            {
+                title: 'Upaya Menjaga Silaturrahmi EDSA Menggelar Ragam Kegiatan Olah Raga',
+                image: 'images/2025/2024.jpg',
+                tech: ['November 26', 'PBI Admin'],
+                link: 'https://ftk.ar-raniry.ac.id/2024/11/upaya-menjaga-silaturrahmi-edsa-menggelar-ragam-kegiatan-olah-raga/'
+            },
+            {
+                title: 'Prodi Pendidikan Bahasa Inggris Kembali Menggelar BSC Tahun 2024',
+                image: 'https://sumberpost.com/wp-content/uploads/2024/10/IMG-20241013-WA0067-1536x1033.jpg',
+                tech: ['October 13', 'Sumber Post'],
+                link: 'https://sumberpost.com/2024/10/13/prodi-pendidikan-bahasa-inggris-kembali-menggelar-bsc-tahun-2024/'
+            }
+        ],
     };
 
     const currentYear = carouselElement.getAttribute('data-year');
