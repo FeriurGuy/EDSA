@@ -29,6 +29,133 @@
 
         <link href="css/edsa-styles.css" rel="stylesheet">
 
+        <style>
+            .hero-nav-btn {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 5;
+                background: transparent;
+                border: none;
+                color: #ffffff;
+                font-size: 34px;
+                line-height: 1;
+                padding: 10px;
+                cursor: pointer;
+                opacity: 0.7;
+                transition: opacity 0.3s ease;
+            }
+            .hero-nav-btn:hover,
+            .hero-nav-btn:focus {
+                opacity: 1;
+                outline: none;
+            }
+            .hero-nav-prev { left: 10px; }
+            .hero-nav-next { right: 10px; }
+            @media (max-width: 768px) {
+                .hero-nav-btn { font-size: 24px; padding: 6px; }
+            }
+        </style>
+
+        <style>
+            .edsa-banner {
+                position: relative;
+                min-height: 520px;
+                border-radius: 20px;
+                overflow: hidden;
+            }
+            .edsa-banner-slide {
+                position: absolute;
+                inset: 0;
+                background-color: #2b2f36;
+                background-size: cover;
+                background-position: center;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.6s ease, visibility 0.6s ease;
+                z-index: 0;
+            }
+            .edsa-banner-slide::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35));
+                z-index: 0;
+                pointer-events: none;
+            }
+            .edsa-banner-slide.active {
+                opacity: 1;
+                visibility: visible;
+            }
+            .edsa-banner-text {
+                position: relative;
+                z-index: 1;
+                padding: 55px 60px;
+                max-width: 820px;
+                text-align: left;
+            }
+            .edsa-banner-text h3 {
+                color: #ffffff;
+                font-weight: 700;
+                font-size: 34px;
+                margin-bottom: 18px;
+            }
+            .edsa-banner-text p {
+                color: #ffffff;
+                font-weight: 600;
+                font-size: 17px;
+                margin-bottom: 0;
+            }
+            .edsa-banner-btn {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 3;
+                background: transparent;
+                border: none;
+                color: #ffffff;
+                font-size: 38px;
+                line-height: 1;
+                padding: 10px;
+                cursor: pointer;
+                opacity: 0.75;
+                transition: opacity 0.3s ease;
+            }
+            .edsa-banner-btn:hover,
+            .edsa-banner-btn:focus { opacity: 1; outline: none; }
+            .edsa-banner-prev { left: 12px; }
+            .edsa-banner-next { right: 12px; }
+            .edsa-banner-drive {
+                position: absolute;
+                left: 20px;
+                bottom: 20px;
+                z-index: 3;
+                width: 42px;
+                height: 42px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: rgba(255, 255, 255, 0.92);
+                color: #ff0000;
+                font-size: 20px;
+                border-radius: 8px;
+                text-decoration: none;
+                transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+            }
+            .edsa-banner-drive:hover {
+                background: #ff0000;
+                color: #ffffff;
+                transform: translateY(-2px);
+            }
+            @media (max-width: 768px) {
+                .edsa-banner { min-height: 400px; }
+                .edsa-banner-text { padding: 32px 26px; }
+                .edsa-banner-text h3 { font-size: 26px; }
+                .edsa-banner-text p { font-size: 15px; }
+                .edsa-banner-btn { font-size: 28px; padding: 6px; }
+            }
+        </style>
+
     </head>
     
     <div id="preloader">
@@ -129,7 +256,15 @@
                 </div>
             </nav>
             
-            <section class="hero-section d-flex flex-column justify-content-start" style="min-height: 480px; padding-top: 140px; padding-bottom: 0;">
+            <section class="hero-section d-flex flex-column justify-content-start" id="heroSlider" style="min-height: 480px; padding-top: 140px; padding-bottom: 0; position: relative; overflow: hidden;">
+
+                <button class="hero-nav-btn hero-nav-prev" id="heroPrevBtn" aria-label="Previous slide" type="button">
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+                <button class="hero-nav-btn hero-nav-next" id="heroNextBtn" aria-label="Next slide" type="button">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+
                 <div class="container">
                     <div class="row">
 
@@ -225,7 +360,7 @@
                                 
                                 <div class="col-md-6 col-12 animate-on-scroll leader-card-spacer">
                                     <div class="team-thumb bg-white shadow-lg">
-                                        <img src="images/Divisi/DPH/faiz.jpg" class="about-image img-fluid" alt="Al-Faiz Rahmatillah" style="height: 500px; width: 100%; object-fit: cover; object-position: top;">
+                                        <img src="images/Divisi/DPH/faiz.jpg" class="about-image img-fluid" alt="Al-Faiz Rahmatillah" style="height: 400px; width: 100%; object-fit: cover; object-position: top;">
 
                                         <div class="team-info">
                                             <h5 class="mb-2">Al-Faiz Rahmatillah</h5>
@@ -331,69 +466,53 @@
 
                         <div class="col-lg-12 col-12 animate-on-scroll">
                             <div class="section-title-wrap mb-4">
+                                <h4 class="section-title">Weekly Activities</h4>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-12 mb-5 animate-on-scroll">
+                            <div class="edsa-banner" id="edsaBanner">
+
+                                <!-- Slide 1 -->
+                                <div class="edsa-banner-slide active" style="background-image: url('images/weekly/images/EDSA CORNER.JPG');">
+                                    <div class="edsa-banner-text">
+                                        <h3>EDSA CORNER</h3>
+                                        <p>On September 27th, 2026, we gathered for fun with our fellow EDSA friends to refresh and have a good time.<br>This program was organized by HRD.</p>
+                                    </div>
+                                <a href="https://drive.google.com/drive/folders/15fXdlGf1WBRn7Mf-cFxs10ROiGOuI1or?usp=sharing" target="_blank" rel="noopener" class="edsa-banner-drive" title="Open documentation folder" aria-label="Open documentation folder">
+                                    <i class="bi bi-folder2-open"></i>
+                                </a>
+                                </div>
+                               
+
+                                <!-- Slide 2 -->
+                                <div class="edsa-banner-slide" style="background-image: url('images/weekly/images/Rapat edsa cup.jpeg');">
+                                    <div class="edsa-banner-text">
+                                        <h3>RAPAT KEPANITIAAN EDSA CUP</h3>
+                                        <p>On October 15th, 2026, we held a meeting for the organizing committee of EDSA Cup.<br>This program was organized by the EDSA committee.</p>
+                                    </div>
+                                    <a href="https://www.instagram.com/reel/Del6W_1TQFZ/" target="_blank" rel="noopener" class="edsa-banner-drive" title="Open documentation folder" aria-label="Open documentation folder">
+                                    <i class="bi bi-folder2-open"></i>
+                                    </a>
+                                </div>
+
+                                <button class="edsa-banner-btn edsa-banner-prev" id="bannerPrevBtn" aria-label="Previous slide" type="button">
+                                    <i class="bi bi-chevron-left"></i>
+                                </button>
+                                <button class="edsa-banner-btn edsa-banner-next" id="bannerNextBtn" aria-label="Next slide" type="button">
+                                    <i class="bi bi-chevron-right"></i>
+                                </button>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-12 animate-on-scroll">
+                            <div class="section-title-wrap mb-4">
                                 <h4 class="section-title">Latest Events</h4>
                             </div>
                         </div>
 
                         <div class="col-lg-6 col-12 mb-4 animate-on-scroll">
-                            <div class="custom-block d-flex h-100">
-                                <div class="col-5">
-                                    <div class="custom-block-icon-wrap" style="width: 100%; height: 100%;">
-                                        <div class="section-overlay"></div>
-                                        <a href="ISSEI 2026.html" class="custom-block-image-wrap" style="height: 100%;">
-                                            <img src="images/2026/International/International.JPG" class="custom-block-image img-fluid" alt="" style="width: 100%; height: 100%; min-height: 200px; object-fit: cover;">
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="custom-block-info col-7 pt-0 ps-3">
-                                    <div class="custom-block-top d-flex mb-1">
-                                        <small class="me-4">
-                                            <i class="bi-calendar-event-fill custom-icon"></i>
-                                            September 04, 2026
-                                        </small>
-                                    </div>
-
-                                    <h5 class="mb-2">
-                                        <a href="ISSEI 2026.html">
-                                            International seminar 2026
-                                        </a>
-                                    </h5>
-                                    <p class="mb-0">On Thursday, September 3, 2026, the English Department Student Association (EDSA) of UIN Ar-Raniry held the International Seminar English Education (ISSE) Vol. 3</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-12 mb-4 animate-on-scroll">
-                            <div class="custom-block d-flex h-100">
-                                <div class="col-5">
-                                    <div class="custom-block-icon-wrap" style="width: 100%; height: 100%;">
-                                        <div class="section-overlay"></div>
-                                        <a href="2025.html#Care-With-EDSA" class="custom-block-image-wrap" style="height: 100%;">
-                                            <img src="images/2026/PBAK/PBAK.png" class="custom-block-image img-fluid" alt="" style="width: 100%; height: 100%; min-height: 200px; object-fit: cover;">
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="custom-block-info col-7 pt-0 ps-3">
-                                    <div class="custom-block-top d-flex mb-1">
-                                        <small class="me-4">
-                                            <i class="bi-calendar-event-fill custom-icon"></i>
-                                            August 28, 2026
-                                        </small>
-                                    </div>
-
-                                    <h5 class="mb-2">
-                                        <a href="2026.html#PBAK-2026">
-                                            PBAK 2026
-                                        </a>
-                                    </h5>
-                                    <p class="mb-0">On Thursday, August 27, 2026, the English Department Student Association (EDSA) of the Faculty of Education and Teacher Training</p>
-                                </div>
-                            </div>
-                        </div>
-
-                                               <div class="col-lg-6 col-12 mb-4 animate-on-scroll">
                             <div class="custom-block d-flex h-100">
                                 <div class="col-5">
                                     <div class="custom-block-icon-wrap" style="width: 100%; height: 100%;">
@@ -451,7 +570,122 @@
                             </div>
                         </div>
 
-                        
+                        <div class="col-lg-6 col-12 mb-4 animate-on-scroll">
+                            <div class="custom-block d-flex h-100">
+                                <div class="col-5">
+                                    <div class="custom-block-icon-wrap" style="width: 100%; height: 100%;">
+                                        <div class="section-overlay"></div>
+                                        <a href="Intrnational Seminar.html" class="custom-block-image-wrap" style="height: 100%;">
+                                            <img src="images/2025/internationalsemina 1.JPG" class="custom-block-image img-fluid" alt="" style="width: 100%; height: 100%; min-height: 200px; object-fit: cover;">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="custom-block-info col-7 pt-0 ps-3">
+                                    <div class="custom-block-top d-flex mb-1">
+                                        <small class="me-4">
+                                            <i class="bi-calendar-event-fill custom-icon"></i>
+                                            November 13th, 2025
+                                        </small>
+                                    </div>
+
+                                    <h5 class="mb-2">
+                                        <a href="Intrnational Seminar.html">
+                                            International Seminar
+                                        </a>
+                                    </h5>
+                                    <p class="mb-0">EDSA proudly presents the International Seminar “From Classroom to Global Stage: Building Your Public Speaking with Confidence and Clarity”</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mb-4 animate-on-scroll">
+                            <div class="custom-block d-flex h-100">
+                                <div class="col-5">
+                                    <div class="custom-block-icon-wrap" style="width: 100%; height: 100%;">
+                                        <div class="section-overlay"></div>
+                                        <a href="BSC 2025.html" class="custom-block-image-wrap" style="height: 100%;">
+                                            <img src="images/2025/bsc.JPG" class="custom-block-image img-fluid" alt="" style="width: 100%; height: 100%; min-height: 200px; object-fit: cover;">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="custom-block-info col-7 pt-0 ps-3">
+                                    <div class="custom-block-top d-flex mb-1">
+                                        <small class="me-4">
+                                            <i class="bi-calendar-event-fill custom-icon"></i>
+                                            August 27th, 2025
+                                        </small>
+                                    </div>
+
+                                    <h5 class="mb-2">
+                                        <a href="BSC 2025.html">
+                                            BSC 2025
+                                        </a>
+                                    </h5>
+                                    <p class="mb-0">Blessing Ceremony is a welcome event for new students of the English Education Study Program, featuring class rep selection, creative group performances, etc.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mb-4 animate-on-scroll">
+                            <div class="custom-block d-flex h-100">
+                                <div class="col-5">
+                                    <div class="custom-block-icon-wrap" style="width: 100%; height: 100%;">
+                                        <div class="section-overlay"></div>
+                                        <a href="2025.html#TEN_Humanity_Action_II" class="custom-block-image-wrap" style="height: 100%;">
+                                            <img src="images/2025/ten humanity.JPG" class="custom-block-image img-fluid" alt="" style="width: 100%; height: 100%; min-height: 200px; object-fit: cover;">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="custom-block-info col-7 pt-0 ps-3">
+                                    <div class="custom-block-top d-flex mb-1">
+                                        <small class="me-4">
+                                            <i class="bi-calendar-event-fill custom-icon"></i>
+                                            September 21th, 2025
+                                        </small>
+                                    </div>
+
+                                    <h5 class="mb-2">
+                                        <a href="2025.html#TEN_Humanity_Action_II">
+                                            TEN Humanity Action II
+                                        </a>
+                                    </h5>
+                                    <p class="mb-0">On September 21, the English Department Student Association conducted one of its annual HRD programs at Panti Asuhan Bumi Moro, Garut, Aceh Besar.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mb-4 animate-on-scroll">
+                            <div class="custom-block d-flex h-100">
+                                <div class="col-5">
+                                    <div class="custom-block-icon-wrap" style="width: 100%; height: 100%;">
+                                        <div class="section-overlay"></div>
+                                        <a href="2025.html#PBAK_2025" class="custom-block-image-wrap" style="height: 100%;">
+                                            <img src="images/2025/pbak 1.JPG" class="custom-block-image img-fluid" alt="" style="width: 100%; height: 100%; min-height: 200px; object-fit: cover;">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="custom-block-info col-7 pt-0 ps-3">
+                                    <div class="custom-block-top d-flex mb-1">
+                                        <small class="me-4">
+                                            <i class="bi-calendar-event-fill custom-icon"></i>
+                                            August 27th, 2025
+                                        </small>
+                                    </div>
+
+                                    <h5 class="mb-2">
+                                        <a href="2025.html#PBAK_2025">
+                                            PBAK 2025
+                                        </a>
+                                    </h5>
+                                    <p class="mb-0">This program is not just an introduction, it’s the spark that lights the beginning of your academic journey. It’s the moment where friendships are built, knowledge is explored.</p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </section>
@@ -474,7 +708,7 @@
                     </a>
                         <div class="custom-block-info custom-block-overlay-info">
                             <h5 class="mb-1"><a href="2026.html">2026</a></h5>
-                            <p class="badge mb-0">4 Events</p>
+                            <p class="badge mb-0">2 Events</p>
                         </div>
                     </div>
                 </div>
@@ -821,6 +1055,50 @@
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/owl.carousel.min.js"></script>
         <script src="js/custom.js"></script>
+
+        <script>
+            (function () {
+                var heroImages = [
+                    'images/hero.jpeg'
+                    // Tambahin path foto lain di sini, contoh: , 'images/foto2.jpg'
+                ];
+                var currentIndex = 0;
+                var heroEl = document.getElementById('heroSlider');
+
+                function renderHero() {
+                    heroEl.style.backgroundImage =
+                        "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('" + heroImages[currentIndex] + "')";
+                }
+
+                document.getElementById('heroNextBtn').addEventListener('click', function () {
+                    currentIndex = (currentIndex + 1) % heroImages.length;
+                    renderHero();
+                });
+
+                document.getElementById('heroPrevBtn').addEventListener('click', function () {
+                    currentIndex = (currentIndex - 1 + heroImages.length) % heroImages.length;
+                    renderHero();
+                });
+            })();
+        </script>
+
+        <script>
+            (function () {
+                var banner = document.getElementById('edsaBanner');
+                if (!banner) return;
+                var slides = banner.querySelectorAll('.edsa-banner-slide');
+                var current = 0;
+
+                function show(i) {
+                    slides[current].classList.remove('active');
+                    current = (i + slides.length) % slides.length;
+                    slides[current].classList.add('active');
+                }
+
+                document.getElementById('bannerNextBtn').addEventListener('click', function () { show(current + 1); });
+                document.getElementById('bannerPrevBtn').addEventListener('click', function () { show(current - 1); });
+            })();
+        </script>
 
     </body>
 </html>
