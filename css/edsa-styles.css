@@ -2122,3 +2122,49 @@ main {
 .gallery-item:hover .gallery-overlay { opacity: 1; }
 .gallery-item:hover .gallery-overlay i { transform: scale(1); }
 
+/* ===== ECO Programs section (ECO.html) ===== */
+    .eco-prog { background:#fbfbfb; padding:70px 0 60px; overflow:hidden; }
+    .eco-prog-eyebrow { font-family:'Sono',monospace; font-size:12px; letter-spacing:3px; text-transform:uppercase; color:#2b2b2b; margin-bottom:10px; }
+    .eco-prog-title { font-size:clamp(44px,8vw,84px); font-weight:800; line-height:1; letter-spacing:-2px; color:#1a1a1a; margin:0 0 18px; }
+    .eco-prog-title span { color:var(--primary-color); }
+    .eco-prog-sub { max-width:360px; font-size:16px; color:#222; margin:0; }
+    .eco-prog-tag { border-left:1px solid #2b2b2b; padding-left:24px; font-family:'Sono',monospace; font-size:12px; letter-spacing:3px; text-transform:uppercase; color:#2b2b2b; max-width:260px; }
+    .eco-prog-wrap { position:relative; margin-top:40px; }
+    .eco-prog-track { display:flex; gap:14px; overflow-x:auto; scroll-snap-type:x mandatory; scroll-behavior:smooth; padding:0 24px 6px; scrollbar-width:none; -webkit-overflow-scrolling:touch; }
+    .eco-prog-track::-webkit-scrollbar { display:none; }
+    .eco-card { text-decoration:none; transition:transform .35s ease, box-shadow .35s ease; position:relative; flex:0 0 250px; height:470px; border-radius:2px; overflow:hidden; scroll-snap-align:start; display:flex; flex-direction:column; }
+    .eco-card.dark { background:var(--primary-color); color:#fff; }
+    .eco-card.light { background:#e3e1da; color:#1a1a1a; }
+    .eco-card-head { padding:22px 22px 0; position:relative; z-index:2; }
+    .eco-card-num { font-size:34px; font-weight:300; line-height:1; margin-bottom:22px; }
+    .eco-card-name { font-size:18px; font-weight:700; line-height:1.15; margin:0 0 8px; color:inherit; }
+    .eco-card-cat { font-family:'Sono',monospace; font-size:11px; letter-spacing:1px; opacity:.75; margin:0 0 12px; }
+    .eco-card-line { width:44px; height:1px; background:currentColor; opacity:.6; }
+    .eco-card-img { position:absolute; left:0; right:0; bottom:0; height:62%; background-size:cover; background-position:center; }
+    .eco-card:nth-child(odd) .eco-card-img { clip-path:polygon(0 0,100% 14%,100% 100%,0 100%); }
+    .eco-card:nth-child(even) .eco-card-img { clip-path:polygon(0 14%,100% 0,100% 100%,0 100%); }
+    .eco-card-img::after { content:""; position:absolute; inset:0; background:linear-gradient(to top,rgba(40,8,6,.88) 0%,rgba(40,8,6,0) 55%); }
+    .eco-card-cap { position:absolute; left:0; right:0; bottom:0; z-index:2; padding:0 20px 20px; color:#fff; font-size:13px; line-height:1.35; }
+    .eco-card-cap i { display:block; font-size:18px; margin-bottom:10px; }
+    .eco-card:hover, .eco-card:focus-visible { transform:translateY(-10px); box-shadow:0 18px 34px rgba(0,0,0,.22); outline:none; }
+    .eco-card-img { transition:transform .6s ease; }
+    .eco-card:hover .eco-card-img { transform:scale(1.07); }
+    .eco-card-line { transition:width .35s ease; }
+    .eco-card:hover .eco-card-line { width:90px; }
+    .eco-card-cap i { transition:transform .3s ease; }
+    .eco-card:hover .eco-card-cap i { transform:translateX(10px); }
+    .eco-card.light:hover .eco-card-name { color:var(--primary-color); }
+    .eco-card-name { transition:color .3s ease; }
+    .eco-prog-arrow { position:absolute; top:50%; transform:translateY(-50%); z-index:5; width:50px; height:50px; border:0; border-radius:50%; background:var(--primary-color); color:#fff; font-size:20px; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:background .2s ease, transform .2s ease; }
+    .eco-prog-arrow:hover { background:#c5271c; }
+    .eco-prog-prev { left:14px; }
+    .eco-prog-next { right:14px; }
+    .eco-prog-dots { display:flex; justify-content:center; gap:14px; margin-top:26px; }
+    .eco-prog-dots button { width:7px; height:7px; border:0; padding:0; border-radius:50%; background:#b9b8b0; cursor:pointer; transition:background .2s ease, transform .2s ease; }
+    .eco-prog-dots button.active { background:#1a1a1a; transform:scale(1.25); }
+    @media (max-width:576px) {
+        .eco-prog { padding:50px 0 40px; }
+        .eco-prog-tag { margin-top:24px; }
+        .eco-card { flex-basis:78%; height:450px; }
+        .eco-prog-arrow { width:42px; height:42px; font-size:17px; }
+    }

@@ -97,11 +97,19 @@
             .edsa-banner-btn:focus { opacity: 1; outline: none; }
             .edsa-banner-prev { left: 12px; }
             .edsa-banner-next { right: 12px; }
-            .edsa-banner-drive {
+            
+            /* Container untuk Folder Icon & Tombol See More di Kiri Bawah */
+            .edsa-banner-bottom-widgets {
                 position: absolute;
                 left: 20px;
                 bottom: 20px;
                 z-index: 3;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .edsa-banner-drive {
                 width: 42px;
                 height: 42px;
                 display: flex;
@@ -119,12 +127,44 @@
                 color: #ffffff;
                 transform: translateY(-2px);
             }
+
+            /* Widget Tombol 'See More' Kustom */
+            .edsa-banner-seemore {
+                height: 42px;
+                padding: 0 16px;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                background: rgba(255, 255, 255, 0.92);
+                color: #222222;
+                font-size: 14px;
+                font-weight: 600;
+                border-radius: 8px;
+                text-decoration: none;
+                transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+            }
+            .edsa-banner-seemore:hover {
+                background: #ffffff;
+                color: #ff0000;
+                transform: translateY(-2px);
+            }
+            .edsa-banner-seemore i {
+                font-size: 14px;
+                transition: transform 0.2s ease;
+            }
+            .edsa-banner-seemore:hover i {
+                transform: translateX(3px);
+            }
+
             @media (max-width: 768px) {
                 .edsa-banner { min-height: 400px; }
                 .edsa-banner-text { padding: 32px 26px; }
                 .edsa-banner-text h3 { font-size: 26px; }
                 .edsa-banner-text p { font-size: 15px; }
                 .edsa-banner-btn { font-size: 28px; padding: 6px; }
+                .edsa-banner-bottom-widgets { left: 15px; bottom: 15px; gap: 8px; }
+                .edsa-banner-drive { width: 38px; height: 38px; font-size: 18px; }
+                .edsa-banner-seemore { height: 38px; padding: 0 12px; font-size: 13px; }
             }
         </style>
 
@@ -445,6 +485,17 @@
                                         <h3>EDSA CORNER</h3>
                                         <p>On September 27th, 2026, we gathered for fun with our fellow EDSA friends to refresh and have a good time.<br>This program was organized by HRD.</p>
                                     </div>
+
+                                    <div class="edsa-banner-bottom-widgets">
+                                    <a href="https://drive.google.com/drive/folders/15fXdlGf1WBRn7Mf-cFxs10ROiGOuI1or?usp=sharing" target="_blank" rel="noopener" class="edsa-banner-drive" title="Open documentation folder" aria-label="Open documentation folder">
+                                        <i class="bi bi-folder2-open"></i>
+                                    </a>
+
+                                    <a href="our-gallery.html" class="edsa-banner-seemore" title="See More Activities">
+                                        <span>See More</span>
+                                        <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                </div>
                                 </div>
 
                                 <!-- Slide 2 -->
@@ -453,6 +504,18 @@
                                         <h3>RAPAT KEPANITIAAN EDSA CUP</h3>
                                         <p>On October 15th, 2026, we held a meeting for the organizing committee of EDSA Cup.<br>This program was organized by the EDSA committee.</p>
                                     </div>
+
+                                      <!-- Area Widgets Kiri Bawah: Icon Folder & Tombol See More -->
+                                <div class="edsa-banner-bottom-widgets">
+                                    <a href="https://drive.google.com/drive/folders/15fXdlGf1WBRn7Mf-cFxs10ROiGOuI1or?usp=sharing" target="_blank" rel="noopener" class="edsa-banner-drive" title="Open documentation folder" aria-label="Open documentation folder">
+                                        <i class="bi bi-folder2-open"></i>
+                                    </a>
+
+                                    <a href="2023.html" class="edsa-banner-seemore" title="See More Activities">
+                                        <span>See More</span>
+                                        <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                </div>
                                 </div>
 
                                 <button class="edsa-banner-btn edsa-banner-prev" id="bannerPrevBtn" aria-label="Previous slide" type="button">
@@ -461,11 +524,6 @@
                                 <button class="edsa-banner-btn edsa-banner-next" id="bannerNextBtn" aria-label="Next slide" type="button">
                                     <i class="bi bi-chevron-right"></i>
                                 </button>
-
-                                <a href="https://drive.google.com/drive/folders/15fXdlGf1WBRn7Mf-cFxs10ROiGOuI1or?usp=sharing" target="_blank" rel="noopener" class="edsa-banner-drive" title="Open documentation folder" aria-label="Open documentation folder">
-                                    <i class="bi bi-folder2-open"></i>
-                                </a>
-
                             </div>
                         </div>
 

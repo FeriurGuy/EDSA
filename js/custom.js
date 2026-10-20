@@ -1,5 +1,4 @@
-
-  (function ($) {
+(function ($) {
   
   "use strict";
   $('.navbar-collapse a:not(.dropdown-toggle)').on('click',function(){
@@ -181,3 +180,30 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(counter);
     });
 });
+
+/* ===== ECO Programs slider (ECO.html) ===== */
+    (function () {
+        var track = document.getElementById('ecoProgTrack');
+        if (!track) return;
+        var cards = track.querySelectorAll('.eco-card');
+        var dotsBox = document.getElementById('ecoProgDots');
+        var dots = [];
+        cards.forEach(function (c, i) {
+            var b = document.createElement('button');
+            b.type = 'button';
+            b.setAttribute('aria-label', 'Go to program ' + (i + 1));
+            b.addEventListener('click', function () { track.scrollTo({ left: c.offsetLeft - track.offsetLeft - 24, behavior: 'smooth' }); });
+            dotsBox.appendChild(b);
+            dots.push(b);
+        });
+        function step() { return cards[0].offsetWidth + 14; }
+        function update() {
+            var i = Math.round(track.scrollLeft / step());
+            i = Math.max(0, Math.min(cards.length - 1, i));
+            dots.forEach(function (d, k) { d.classList.toggle('active', k === i); });
+        }
+        document.getElementById('ecoProgNext').addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
+        document.getElementById('ecoProgPrev').addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+        track.addEventListener('scroll', update);
+        update();
+    })();
